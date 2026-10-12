@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<!-- ============================================================================
+  TRUE NORTH INTERACTIVE — company site
+  ----------------------------------------------------------------------------
+  SOCIALS: the social row lives in #contact (search "social-row" below).
+  Add each platform as its URL is confirmed — one line each:
+    1. copy the commented anchor template for that platform,
+    2. paste the live profile URL into href, 3. uncomment the line.
+  NEVER render a social icon without a live URL behind it.
+============================================================================= -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>True North Interactive — Apps Worth Collecting</title>
+<meta name="description" content="True North Interactive is an independent app studio building ScanVault, the trading-card scanner collectors deserve, and Hollowreign, a dark-fantasy card saga.">
+<link rel="canonical" href="https://truenorth-interactive.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="True North Interactive">
+<meta property="og:title" content="True North Interactive — Apps Worth Collecting">
+<meta property="og:description" content="Independent app studio building ScanVault, the trading-card scanner collectors deserve, and Hollowreign, a dark-fantasy card saga.">
+<meta property="og:url" content="https://truenorth-interactive.github.io/">
+<meta property="og:image" content="https://truenorth-interactive.github.io/screenshots/hollowreign-keyart.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="True North Interactive — Apps Worth Collecting">
+<meta name="twitter:description" content="Independent app studio building ScanVault, the trading-card scanner collectors deserve, and Hollowreign, a dark-fantasy card saga.">
+<meta name="twitter:image" content="https://truenorth-interactive.github.io/screenshots/hollowreign-keyart.webp">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"True North Interactive","url":"https://truenorth-interactive.github.io/","sameAs":["https://www.youtube.com/@truenorthinteractive"]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<noscript><style>.rv{opacity:1 !important;transform:none !important}.hero-enter{animation:none !important}</style></noscript>
+<style>
+:root{
+  --bg:#0b0e1a; --bg2:#10162e; --txt:#eef1ff; --mut:#9aa3c7;
+  --line:rgba(255,255,255,.09);
+  --gold:#f2b73c; --cyan:#53dbff; --ember:#ff7a3c;
+  --shadow:0 18px 50px rgba(0,0,0,.45);
+  --font-d:"Sora",system-ui,sans-serif; --font-b:"Inter",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:var(--font-b);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+::selection{background:rgba(242,183,60,.35)}
+.skip{position:absolute;left:-9999px;top:0;background:var(--gold);color:#1a1405;font-weight:600;padding:10px 18px;border-radius:0 0 12px 0;z-index:200}
+.skip:focus{left:0}
+a{color:var(--cyan)}
+:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(20px,4vw,40px)}
+section{padding:clamp(72px,10vw,144px) 0}
+h1,h2,h3,.d{font-family:var(--font-d);font-weight:800;letter-spacing:-.03em;line-height:1.04;text-wrap:balance}
+.kicker{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;font-weight:600;letter-spacing:.22em;color:var(--cyan);text-transform:uppercase;margin-bottom:20px}
+.kicker.gold{color:var(--gold)} .kicker.ember{color:var(--ember)}
+.sub{color:var(--mut);font-size:clamp(16px,1.6vw,18px);max-width:60ch;text-wrap:pretty}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--font-b);font-weight:600;font-size:16px;padding:15px 30px;border-radius:16px;text-decoration:none;cursor:pointer;border:0;transition:transform .18s ease,box-shadow .18s ease}
+.btn-gold{background:var(--gold);color:#1a1405;box-shadow:0 8px 28px rgba(242,183,60,.28)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 12px 34px rgba(242,183,60,.36)}
+.btn-ghost{background:transparent;color:var(--txt);border:1px solid var(--line)}
+.btn-ghost:hover{border-color:rgba(255,255,255,.28);transform:translateY(-2px)}
+.pill{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:9px 18px;border-radius:999px;border:1px solid var(--line);color:var(--mut);background:rgba(255,255,255,.03)}
+.pill .pulse{width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 10px var(--cyan);animation:pulse 2.2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+/* ---------- nav ---------- */
+.nav{position:sticky;top:0;z-index:100;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:rgba(11,14,26,.72);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--txt);font-family:var(--font-d);font-weight:700;font-size:17px;letter-spacing:-.01em}
+.brand svg{width:22px;height:22px;flex:none}
+.nav-links{display:flex;gap:6px}
+.nav-links a{color:var(--mut);text-decoration:none;font-weight:500;font-size:15px;padding:9px 15px;border-radius:10px}
+.nav-links a:hover{color:var(--txt);background:rgba(255,255,255,.05)}
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;padding:clamp(64px,9vw,130px) 0 clamp(56px,7vw,96px)}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(900px 480px at 78% 18%,rgba(83,219,255,.08),transparent 60%),radial-gradient(760px 520px at 12% 88%,rgba(242,183,60,.07),transparent 60%);pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(40px,6vw,90px);align-items:center}
+.hero h1{font-size:clamp(3rem,9vw,7.5rem);margin:0 0 24px}
+.hero h1 .hl{color:var(--gold)}
+.hero .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.hero-card-stage{display:flex;justify-content:center;perspective:1100px}
+/* holographic card */
+.holo-card{position:relative;width:min(320px,72vw);aspect-ratio:5/7;border-radius:22px;
+  background:linear-gradient(150deg,#141b3a 0%,#0d1226 45%,#1a1440 100%);
+  border:2px solid var(--gold);
+  box-shadow:var(--shadow),0 0 70px rgba(242,183,60,.14),inset 0 0 60px rgba(83,219,255,.05);
+  transform-style:preserve-3d;will-change:transform;overflow:hidden}
+.holo-card::before{content:'';position:absolute;inset:0;background:radial-gradient(420px circle at var(--mx,50%) var(--my,38%),rgba(83,219,255,.22),transparent 55%),radial-gradient(300px circle at calc(100% - var(--mx,50%)) calc(100% - var(--my,38%)),rgba(242,183,60,.16),transparent 55%);pointer-events:none}
+.holo-inner{position:absolute;inset:14px;border:1px solid rgba(242,183,60,.4);border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:24px;text-align:center}
+.holo-inner svg{width:54px;height:54px;filter:drop-shadow(0 0 12px rgba(83,219,255,.6))}
+.holo-name{font-family:var(--font-d);font-weight:800;letter-spacing:.28em;font-size:15px;color:var(--gold);padding-left:.28em}
+.holo-sub{font-size:12px;letter-spacing:.18em;color:var(--mut);text-transform:uppercase;padding-left:.18em}
+.holo-foil{position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.09) 45%,transparent 60%);background-size:250% 250%;background-position:calc(var(--mx,50%)) calc(var(--my,40%));pointer-events:none}
+.hero-enter{animation:heroIn .7s cubic-bezier(.2,.7,.2,1) both}
+.hero-enter.d1{animation-delay:.08s}.hero-enter.d2{animation-delay:.16s}.hero-enter.d3{animation-delay:.26s}.hero-enter.d4{animation-delay:.36s}
+@keyframes heroIn{from{opacity:0;transform:translateY(60px)}to{opacity:1;transform:none}}
+/* ---------- trust strip ---------- */
+.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:26px 0;background:rgba(255,255,255,.015)}
+.trust-row{display:flex;flex-wrap:wrap;gap:14px 40px;justify-content:center;align-items:center}
+.trust-item{display:flex;align-items:center;gap:12px;font-weight:600;font-size:15px;color:var(--txt)}
+.trust-item svg{width:14px;height:14px;flex:none}
+/* ---------- apps ---------- */
+.app-block{display:grid;grid-template-columns:1fr 1fr;gap:clamp(44px,6vw,96px);align-items:center;padding:clamp(40px,5vw,72px) 0}
+.app-block + .app-block{border-top:1px solid var(--line)}
+.app-copy h2{font-size:clamp(2.2rem,4.6vw,3.6rem);margin:0 0 18px}
+.feat{list-style:none;margin:30px 0;display:grid;gap:14px}
+.feat li{display:flex;gap:14px;align-items:flex-start;background:var(--bg2);border:1px solid var(--line);border-radius:16px;padding:16px 18px}
+.feat .fi{flex:none;width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:rgba(83,219,255,.1);border:1px solid rgba(83,219,255,.3);font-size:17px}
+.feat b{display:block;font-size:15.5px}
+.feat span{color:var(--mut);font-size:14.5px}
+.craft{margin-top:26px;padding-top:22px;border-top:1px dashed var(--line);display:grid;gap:10px}
+.craft p{font-size:14px;color:var(--mut);display:flex;gap:10px;align-items:baseline}
+.craft p b{color:var(--txt);font-weight:600}
+.craft .tick{color:var(--cyan);flex:none}
+.launch-note{margin-top:26px;font-size:15.5px;color:var(--txt)}
+.launch-note a{font-weight:600;text-decoration:none;border-bottom:1px solid var(--cyan)}
+/* phone frames */
+.phones{display:flex;gap:clamp(14px,2.5vw,28px);justify-content:center;align-items:flex-start}
+.phone{width:min(270px,42vw);aspect-ratio:412/915;background:#05070f;border-radius:40px;padding:11px;border:1px solid rgba(255,255,255,.14);box-shadow:var(--shadow);position:relative;flex:none}
+.phone:nth-child(2){margin-top:44px}
+.phone img{width:100%;height:100%;object-fit:cover;object-position:top center;border-radius:30px;display:block;background:var(--bg2)}
+.phone::after{content:'';position:absolute;top:23px;left:50%;transform:translateX(-50%);width:96px;height:20px;background:#05070f;border-radius:11px;z-index:2}
+.phone figcaption{position:absolute;left:0;right:0;bottom:-34px;text-align:center;font-size:12.5px;color:var(--mut);letter-spacing:.04em}
+/* scan-moment beat */
+.scanbeat{margin-top:34px;max-width:420px}
+.scanview{position:relative;border-radius:18px;border:1px solid var(--line);background:linear-gradient(160deg,#0e1430,#090d1d);aspect-ratio:16/9;overflow:hidden;box-shadow:var(--shadow)}
+.scan-cardback{position:absolute;inset:26px 70px;border-radius:10px;background:linear-gradient(150deg,#1a2148,#0c1128);border:1px solid rgba(242,183,60,.55);display:flex;align-items:center;justify-content:center}
+.scan-cardback span{font-family:var(--font-d);font-weight:700;font-size:12px;letter-spacing:.3em;color:var(--gold);padding-left:.3em}
+.scan-track{position:absolute;left:8%;right:8%;top:10%;bottom:10%;overflow:hidden;pointer-events:none}
+.scan-move{position:absolute;inset:0;animation:scan 3.2s ease-in-out infinite}
+.scan-line{position:absolute;left:0;right:0;top:0;height:2px;background:var(--cyan);box-shadow:0 0 18px var(--cyan)}
+@keyframes scan{0%,100%{transform:translateY(0)}50%{transform:translateY(100%)}}
+.c{position:absolute;width:26px;height:26px;border:3px solid var(--cyan);opacity:.9}
+.c.tl{top:12px;left:12px;border-right:0;border-bottom:0;border-radius:8px 0 0 0}
+.c.tr{top:12px;right:12px;border-left:0;border-bottom:0;border-radius:0 8px 0 0}
+.c.bl{bottom:12px;left:12px;border-right:0;border-top:0;border-radius:0 0 0 8px}
+.c.br{bottom:12px;right:12px;border-left:0;border-top:0;border-radius:0 0 8px 0}
+.scanbeat figcaption{margin-top:12px;font-size:13.5px;color:var(--mut);display:flex;align-items:center;gap:10px}
+.price-chip{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--txt);background:rgba(242,183,60,.1);border:1px solid rgba(242,183,60,.4);padding:7px 14px;border-radius:999px}
+.price-chip .dot{width:7px;height:7px;border-radius:50%;background:#3ddc84;box-shadow:0 0 8px #3ddc84;animation:pulse 2s infinite}
+/* hollowreign art */
+.keyart{position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}
+.keyart img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:4/4.6;filter:saturate(1.05)}
+.keyart::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(11,14,26,.55),transparent 42%);pointer-events:none}
+.keyart figcaption{position:absolute;left:22px;bottom:18px;z-index:2;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--txt);font-weight:600}
+.keyart figcaption span{display:block;font-size:12px;color:var(--mut);text-transform:none;letter-spacing:0;font-weight:400;margin-top:2px}
+.hr-points{list-style:none;margin:28px 0 0;display:grid;gap:12px}
+.hr-points li{display:flex;gap:12px;align-items:baseline;color:var(--mut);font-size:15.5px}
+.hr-points li b{color:var(--txt)}
+.hr-points .e{color:var(--ember);flex:none}
+/* ---------- studio ---------- */
+#studio .studio-card{background:var(--bg2);border:1px solid var(--line);border-radius:22px;padding:clamp(32px,5vw,64px);box-shadow:var(--shadow);position:relative;overflow:hidden}
+#studio .studio-card::before{content:'';position:absolute;inset:0;background:radial-gradient(600px 300px at 85% 0%,rgba(83,219,255,.06),transparent 60%);pointer-events:none}
+#studio h2{font-size:clamp(2.2rem,4.6vw,3.4rem);margin-bottom:20px}
+#studio p{color:var(--mut);font-size:clamp(16px,1.7vw,18.5px);max-width:62ch;text-wrap:pretty}
+#studio p + p{margin-top:16px}
+#studio p b{color:var(--txt)}
+/* ---------- contact ---------- */
+#contact{text-align:center}
+#contact h2{font-size:clamp(2.4rem,5.4vw,4.2rem);margin-bottom:16px}
+#contact .sub{margin:0 auto 40px}
+.social-row{display:flex;gap:18px;justify-content:center;flex-wrap:wrap}
+.social{display:flex;flex-direction:column;align-items:center;gap:10px;text-decoration:none;color:var(--mut);font-size:13px;font-weight:500;min-width:76px}
+.social .sic{width:56px;height:56px;border-radius:50%;border:1px solid var(--line);background:var(--bg2);display:flex;align-items:center;justify-content:center;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
+.social .sic svg{width:24px;height:24px}
+.social:hover{color:var(--txt)}
+.social:hover .sic{transform:translateY(-3px);border-color:rgba(83,219,255,.5);box-shadow:0 10px 26px rgba(0,0,0,.4)}
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--line);padding:clamp(64px,8vw,110px) 0 40px;position:relative;overflow:hidden}
+.giant-cta{display:block;text-decoration:none;color:var(--txt);font-family:var(--font-d);font-weight:800;letter-spacing:-.03em;line-height:1;font-size:clamp(2.6rem,10vw,8rem);text-wrap:balance;margin-bottom:56px}
+.giant-cta .go{color:var(--gold);transition:color .18s}
+.giant-cta:hover .go{color:var(--cyan)}
+.legal{display:flex;flex-wrap:wrap;gap:10px 26px;align-items:center;justify-content:space-between;padding-top:28px;border-top:1px solid var(--line);font-size:14px;color:var(--mut)}
+.legal nav{display:flex;gap:22px}
+.legal a{color:var(--mut);text-decoration:none}
+.legal a:hover{color:var(--txt)}
+.ebay{margin-top:18px;font-size:12.5px;color:var(--mut);opacity:.75;max-width:70ch}
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none;transition:none}
+  .hero-enter{animation:none}
+  .scan-move,.pill .pulse,.price-chip .dot{animation:none}
+}
+/* ---------- responsive ---------- */
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:56px}
+  .hero-card-stage{order:-1}
+  .holo-card{width:min(240px,64vw)}
+  .app-block{grid-template-columns:1fr;gap:44px}
+  .phone{width:min(230px,44vw)}
+  .phone:nth-child(2){margin-top:28px}
+}
+@media (max-width:520px){
+  .nav-links a{padding:9px 10px;font-size:14px}
+  .brand{font-size:15px}
+  .btn{width:100%}
+  .hero .cta-row{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="True North Interactive — home">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#53dbff" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 21.5 12 12 21.5 2.5 12Z"/></svg>
+      True North Interactive
+    </a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#apps">Apps</a>
+      <a href="#studio">Studio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<!-- ================= HERO ================= -->
+<section class="hero" id="top" aria-labelledby="hero-h">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="kicker hero-enter">Independent app studio — Ajax, Ontario</p>
+      <h1 id="hero-h" class="hero-enter d1">Apps worth <span class="hl">collecting.</span></h1>
+      <p class="sub hero-enter d2">True North Interactive is an independent studio building ScanVault, the trading-card scanner that respects collectors — and Hollowreign, a dark-fantasy saga where every victory earns a card.</p>
+      <div class="cta-row hero-enter d3">
+        <a class="btn btn-gold" href="#apps">Explore the apps</a>
+        <a class="btn btn-ghost" href="#contact">Follow the journey</a>
+      </div>
+    </div>
+    <div class="hero-card-stage hero-enter d4" aria-hidden="true">
+      <div class="holo-card" id="holoCard">
+        <div class="holo-inner">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#53dbff" stroke-width="1.6" stroke-linejoin="round"><path d="M12 2.5 21.5 12 12 21.5 2.5 12Z"/></svg>
+          <div class="holo-name">SCANVAULT</div>
+          <div class="holo-sub">Trading Card Scanner</div>
+        </div>
+        <div class="holo-foil"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TRUST STRIP ================= -->
+<div class="trust" role="list" aria-label="Studio facts">
+  <div class="wrap trust-row">
+    <span class="trust-item" role="listitem"><svg viewBox="0 0 24 24" fill="none" stroke="#53dbff" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 21.5 12 12 21.5 2.5 12Z"/></svg>6 TCG series supported</span>
+    <span class="trust-item" role="listitem"><svg viewBox="0 0 24 24" fill="none" stroke="#53dbff" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 21.5 12 12 21.5 2.5 12Z"/></svg>One-time pricing — no subscriptions</span>
+    <span class="trust-item" role="listitem"><svg viewBox="0 0 24 24" fill="none" stroke="#53dbff" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 21.5 12 12 21.5 2.5 12Z"/></svg>Collector-first: free scans are unlimited</span>
+  </div>
+</div>
+
+<!-- ================= APPS ================= -->
+<section id="apps" aria-label="Our apps" style="padding-top:clamp(56px,7vw,96px)">
+  <div class="wrap">
+
+    <article class="app-block rv" id="scanvault" aria-labelledby="sv-h">
+      <div class="app-copy">
+        <p class="kicker gold">Now in beta</p>
+        <h2 id="sv-h">ScanVault</h2>
+        <p class="sub">Scan any trading card and know what it's worth. Unlimited free single-card scans, live market prices across six TCG series, pull-rate odds, and a $24.99 one-time Pro — never a subscription.</p>
+        <ul class="feat">
+          <li><span class="fi" aria-hidden="true">◇</span><div><b>Unlimited free scans</b><span>Single-card scans are free forever. No caps, no countdown.</span></div></li>
+          <li><span class="fi" aria-hidden="true">▤</span><div><b>45 cards per series on Free</b><span>A real collection on the free plan — 45 cards per TCG series.</span></div></li>
+          <li><span class="fi" aria-hidden="true">◈</span><div><b>Graded values &amp; full price history on Pro</b><span>PSA and BGS estimates plus complete portfolio analytics.</span></div></li>
+          <li><span class="fi" aria-hidden="true">◉</span><div><b>eBay deal alerts</b><span>Pro watches your wishlist for underpriced listings.</span></div></li>
+        </ul>
+        <div class="craft" aria-label="How it's built">
+          <p><span class="tick" aria-hidden="true">✓</span><span><b>On-device ML Kit OCR</b> — your card photos never leave your phone.</span></p>
+          <p><span class="tick" aria-hidden="true">✓</span><span><b>Live prices from TCGdex, PriceCharting and more</b> — real market data, not guesses.</span></p>
+          <p><span class="tick" aria-hidden="true">✓</span><span><b>Fresh data pipeline</b> — card database and pull rates updated weekly.</span></p>
+        </div>
+        <p><span class="pill" style="margin-top:26px"><span class="pulse" aria-hidden="true"></span>Coming soon to Google Play</span></p>
+        <p class="launch-note">Launching on Google Play. <a href="#contact">Follow along</a> for the release date.</p>
+        <figure class="scanbeat" aria-label="Illustrated scan moment">
+          <div class="scanview" aria-hidden="true">
+            <div class="scan-cardback"><span>SCANVAULT</span></div>
+            <div class="scan-track"><div class="scan-move"><div class="scan-line"></div></div></div>
+            <i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i>
+          </div>
+          <figcaption><span class="price-chip"><span class="dot"></span>Live market price</span>&nbsp;Illustrated scan moment — the real thing lives in the app.</figcaption>
+        </figure>
+      </div>
+      <div class="phones" aria-label="ScanVault app screenshots">
+        <figure class="phone">
+          <img src="screenshots/price-history-sheet.png" alt="ScanVault app showing a detailed 30-day price history chart for a trading card" loading="lazy" width="412" height="915">
+          <figcaption>Real price history, per card</figcaption>
+        </figure>
+        <figure class="phone">
+          <img src="screenshots/confetti-burst.png" alt="ScanVault app celebrating a $1,000 collection milestone with confetti" loading="lazy" width="412" height="915">
+          <figcaption>Collection milestones, celebrated</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <article class="app-block rv" id="hollowreign" aria-labelledby="hr-h">
+      <div class="app-copy">
+        <p class="kicker ember">In development</p>
+        <h2 id="hr-h">Hollowreign</h2>
+        <p class="sub">A dark-fantasy tower-defense saga. Collect guardian cards as towers, name your Warden, hold the breach — every victory earns a card.</p>
+        <ul class="hr-points">
+          <li><span class="e" aria-hidden="true">◆</span><span><b>Guardian cards are your towers</b> — twelve guardians to collect and command.</span></li>
+          <li><span class="e" aria-hidden="true">◆</span><span><b>A Warden you name and drive</b> — your hero fights beside your line.</span></li>
+          <li><span class="e" aria-hidden="true">◆</span><span><b>Every victory earns a card</b> — wins become packs, duplicates become levels.</span></li>
+        </ul>
+        <p style="margin-top:26px"><span class="pill"><span class="pulse" aria-hidden="true"></span>Coming soon</span></p>
+      </div>
+      <figure class="keyart">
+        <img src="screenshots/hollowreign-keyart.webp" alt="Hollowreign key art — an armored warden holding a torch before a colossal rune-carved vault door in a moonlit forest" loading="lazy" width="760" height="1520">
+        <figcaption>Official key art<span>From the game, in development</span></figcaption>
+      </figure>
+    </article>
+
+  </div>
+</section>
+
+<!-- ================= STUDIO ================= -->
+<section id="studio" aria-labelledby="studio-h">
+  <div class="wrap">
+    <div class="studio-card rv">
+      <p class="kicker">The studio</p>
+      <h2 id="studio-h">Small studio,<br>collector's creed.</h2>
+      <p>True North Interactive is an independent app studio in Ajax, Ontario. We build collectible-first apps with a simple creed: <b>respect the collector.</b> Free tiers that are actually useful. One-time pricing instead of subscriptions. No dark patterns.</p>
+      <p>We're developers who collect. Every feature ships only if we'd want it in our own binders — honest prices, real odds, and tools that treat your collection like it matters. Because it does.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" aria-labelledby="contact-h">
+  <div class="wrap">
+    <p class="kicker rv" style="text-align:center">Contact</p>
+    <h2 id="contact-h" class="rv">Follow the journey.</h2>
+    <p class="sub rv">New studio, new channels. YouTube is live — the rest are on the way.</p>
+    <!-- social-row: add platforms one line each as URLs go live (see SOCIALS note at top of file) -->
+    <div class="social-row rv" role="list">
+      <a class="social" role="listitem" href="https://www.youtube.com/@truenorthinteractive" target="_blank" rel="noopener" aria-label="True North Interactive on YouTube">
+        <span class="sic" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2.5" y="5.5" width="19" height="13" rx="4" fill="#FF0000"/><path d="M10.2 9.4v5.2L15 11.9z" fill="#fff"/></svg></span>
+        YouTube
+      </a>
+      <!-- <a class="social" role="listitem" href="INSTAGRAM_URL" target="_blank" rel="noopener" aria-label="True North Interactive on Instagram"><span class="sic" aria-hidden="true">[instagram svg]</span>Instagram</a> -->
+      <!-- <a class="social" role="listitem" href="TIKTOK_URL" target="_blank" rel="noopener" aria-label="True North Interactive on TikTok"><span class="sic" aria-hidden="true">[tiktok svg]</span>TikTok</a> -->
+      <!-- <a class="social" role="listitem" href="X_URL" target="_blank" rel="noopener" aria-label="True North Interactive on X"><span class="sic" aria-hidden="true">[x svg]</span>X</a> -->
+      <!-- <a class="social" role="listitem" href="FACEBOOK_URL" target="_blank" rel="noopener" aria-label="True North Interactive on Facebook"><span class="sic" aria-hidden="true">[facebook svg]</span>Facebook</a> -->
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <a class="giant-cta rv" href="#scanvault">Have cards? <span class="go">Scan them.</span></a>
+    <div class="legal">
+      <nav aria-label="Legal">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </nav>
+      <span>© 2026 True North Interactive. All rights reserved.</span>
+    </div>
+    <p class="ebay">As an eBay Partner, True North Interactive may be compensated for qualifying purchases made through links in our apps.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  /* hero holographic tilt — transform only, rAF, pointer-fine only */
+  var card = document.getElementById('holoCard');
+  var fine = window.matchMedia('(pointer: fine)').matches;
+  if (card && fine && !reduce) {
+    var raf = null, tx = 0, ty = 0, cx = 0, cy = 0;
+    function tick(){
+      cx += (tx - cx) * 0.16; cy += (ty - cy) * 0.16;
+      card.style.transform = 'perspective(1000px) rotateX(' + cy.toFixed(2) + 'deg) rotateY(' + cx.toFixed(2) + 'deg)';
+      if (Math.abs(tx - cx) > 0.04 || Math.abs(ty - cy) > 0.04) { raf = requestAnimationFrame(tick); }
+      else { raf = null; }
+    }
+    card.addEventListener('pointermove', function(e){
+      var r = card.getBoundingClientRect();
+      var px = (e.clientX - r.left) / r.width, py = (e.clientY - r.top) / r.height;
+      tx = (px - 0.5) * 20; ty = (0.5 - py) * 20; /* max 10deg */
+      card.style.setProperty('--mx', (px * 100).toFixed(1) + '%');
+      card.style.setProperty('--my', (py * 100).toFixed(1) + '%');
+      if (!raf) raf = requestAnimationFrame(tick);
+    });
+    card.addEventListener('pointerleave', function(){
+      tx = 0; ty = 0;
+      if (!raf) raf = requestAnimationFrame(tick);
+    });
+  }
+  /* reveal on scroll — single observer, opacity/translate only, 60ms stagger */
+  var els = document.querySelectorAll('.rv');
+  if (reduce || !('IntersectionObserver' in window)) {
+    els.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (en.isIntersecting) {
+          var i = Array.prototype.indexOf.call(els, en.target);
+          en.target.style.transitionDelay = ((i % 4) * 60) + 'ms';
+          en.target.classList.add('in');
+          io.unobserve(en.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    els.forEach(function(el){ io.observe(el); });
+  }
+})();
+</script>
+</body>
+</html>
