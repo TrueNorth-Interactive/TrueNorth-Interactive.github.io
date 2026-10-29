@@ -81,6 +81,15 @@ h1,h2,h3,.d{font-family:var(--font-d);font-weight:800;letter-spacing:-.03em;line
 .hero h1 .hl{color:var(--gold)}
 .hero .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
 .hero-card-stage{display:flex;justify-content:center;perspective:1100px}
+/* ---------- hero product tiles (all four products, equal weight) ---------- */
+.hero-tiles{display:grid;grid-template-columns:1fr 1fr;gap:14px;width:100%;max-width:440px}
+.htile{display:block;text-decoration:none;color:var(--txt);background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:18px 18px 16px;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
+.htile:hover{transform:translateY(-3px);border-color:rgba(83,219,255,.45);box-shadow:var(--shadow)}
+.htile .ht-kicker{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);margin-bottom:8px}
+.htile .ht-kicker.ember{color:var(--ember)} .htile .ht-kicker.gold{color:var(--gold)}
+.htile h3{font-size:19px;letter-spacing:-.01em;margin-bottom:4px}
+.htile p{font-size:13.5px;line-height:1.45;color:var(--mut)}
+.htile .ht-status{display:inline-block;margin-top:12px;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--txt);border:1px solid var(--line);border-radius:999px;padding:4px 10px}
 /* holographic card */
 .holo-card{position:relative;width:min(320px,72vw);aspect-ratio:5/7;border-radius:22px;
   background:linear-gradient(150deg,#141b3a 0%,#0d1226 45%,#1a1440 100%);
@@ -233,31 +242,50 @@ footer{border-top:1px solid var(--line);padding:clamp(64px,8vw,110px) 0 40px;pos
         <a class="btn btn-ghost" href="#contact">Follow the journey</a>
       </div>
     </div>
-    <div class="hero-card-stage hero-enter d4" aria-hidden="true">
-      <div class="holo-card" id="holoCard">
-        <div class="holo-inner">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#53dbff" stroke-width="1.6" stroke-linejoin="round"><path d="M12 2.5 21.5 12 12 21.5 2.5 12Z"/></svg>
-          <div class="holo-name">SCANVAULT</div>
-          <div class="holo-sub">Trading Card Scanner</div>
-        </div>
-        <div class="holo-foil"></div>
-      </div>
-    </div>
+    <nav class="hero-tiles hero-enter d4" aria-label="Our products">
+      <a class="htile" href="#scanvault">
+        <div class="ht-kicker gold">Trading-card scanner</div>
+        <h3>ScanVault</h3>
+        <p>Scan a card, know its worth, shelve it in your binder.</p>
+        <span class="ht-status">Now in beta</span>
+      </a>
+      <a class="htile" href="#hollowreign">
+        <div class="ht-kicker ember">Dark-fantasy saga</div>
+        <h3>Hollowreign</h3>
+        <p>Guardian cards as towers. Hold the breach.</p>
+        <span class="ht-status">In development</span>
+      </a>
+      <a class="htile" href="#outbreak">
+        <div class="ht-kicker ember">Roblox survival</div>
+        <h3>OUTBREAK</h3>
+        <p>Cross the city, extract — or die and join them.</p>
+        <span class="ht-status">Coming to Roblox</span>
+      </a>
+      <a class="htile" href="#morningmission">
+        <div class="ht-kicker gold">Alarm that wakes you</div>
+        <h3>MorningMission</h3>
+        <p>An alarm that only stops when the mission is done.</p>
+        <span class="ht-status">In testing</span>
+      </a>
+    </nav>
   </div>
 </section>
 
 <!-- ================= TRUST STRIP ================= -->
 <div class="trust" role="list" aria-label="Studio facts">
   <div class="wrap trust-row">
-    <span class="trust-item" role="listitem"><svg viewBox="0 0 24 24" fill="none" stroke="#53dbff" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 21.5 12 12 21.5 2.5 12Z"/></svg>6 TCG series supported</span>
+    <span class="trust-item" role="listitem"><svg viewBox="0 0 24 24" fill="none" stroke="#53dbff" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 21.5 12 12 21.5 2.5 12Z"/></svg>Four products, one studio</span>
     <span class="trust-item" role="listitem"><svg viewBox="0 0 24 24" fill="none" stroke="#53dbff" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 21.5 12 12 21.5 2.5 12Z"/></svg>One-time pricing — no subscriptions</span>
-    <span class="trust-item" role="listitem"><svg viewBox="0 0 24 24" fill="none" stroke="#53dbff" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 21.5 12 12 21.5 2.5 12Z"/></svg>Collector-first: free scans are unlimited</span>
+    <span class="trust-item" role="listitem"><svg viewBox="0 0 24 24" fill="none" stroke="#53dbff" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 21.5 12 12 21.5 2.5 12Z"/></svg>Independent — Ajax, Ontario</span>
   </div>
 </div>
 
 <!-- ================= APPS ================= -->
 <section id="apps" aria-label="Our apps" style="padding-top:clamp(56px,7vw,96px)">
   <div class="wrap">
+    <p class="kicker rv">The lineup</p>
+    <h2 class="rv" style="font-size:clamp(2.2rem,4.6vw,3.4rem);margin-bottom:16px">Four apps. One studio.</h2>
+    <p class="sub rv" style="margin-bottom:clamp(32px,4vw,56px)">One in beta, one in testing, two in development — each built around collecting something: cards, guardians, missions, or survival.</p>
 
     <article class="app-block rv" id="scanvault" aria-labelledby="sv-h">
       <div class="app-copy">
@@ -403,7 +431,7 @@ footer{border-top:1px solid var(--line);padding:clamp(64px,8vw,110px) 0 40px;pos
 <!-- ================= FOOTER ================= -->
 <footer>
   <div class="wrap">
-    <a class="giant-cta rv" href="#scanvault">Have cards? <span class="go">Scan them.</span></a>
+    <a class="giant-cta rv" href="#contact">Follow the <span class="go">journey.</span></a>
     <div class="legal">
       <nav aria-label="Legal">
         <a href="privacy.html">Privacy Policy</a>
