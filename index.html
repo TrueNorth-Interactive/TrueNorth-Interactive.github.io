@@ -116,6 +116,10 @@ h1,h2,h3,.d{font-family:var(--font-d);font-weight:800;letter-spacing:-.03em;line
 .app-block{display:grid;grid-template-columns:1fr 1fr;gap:clamp(44px,6vw,96px);align-items:center;padding:clamp(40px,5vw,72px) 0}
 .app-block + .app-block{border-top:1px solid var(--line)}
 .app-copy h2{font-size:clamp(2.2rem,4.6vw,3.6rem);margin:0 0 18px}
+.app-head{display:flex;align-items:center;gap:18px;margin:0 0 18px}
+.app-head h2{margin:0}
+.app-logo{width:64px;height:64px;flex:none;object-fit:cover;border-radius:16px;border:1px solid var(--line);box-shadow:var(--shadow)}
+@media(max-width:560px){.app-logo{width:52px;height:52px}.app-head{gap:14px}}
 .feat{list-style:none;margin:30px 0;display:grid;gap:14px}
 .feat li{display:flex;gap:14px;align-items:flex-start;background:var(--bg2);border:1px solid var(--line);border-radius:16px;padding:16px 18px}
 .feat .fi{flex:none;width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;background:rgba(83,219,255,.1);border:1px solid rgba(83,219,255,.3);font-size:17px}
@@ -292,7 +296,7 @@ footer{border-top:1px solid var(--line);padding:clamp(64px,8vw,110px) 0 40px;pos
     <article class="app-block rv" id="scanvault" aria-labelledby="sv-h">
       <div class="app-copy">
         <p class="kicker gold">Now in beta</p>
-        <h2 id="sv-h">ScanVault</h2>
+        <div class="app-head"><img class="app-logo" src="screenshots/scanvault-logo.png" alt="ScanVault app logo" width="64" height="64"><h2 id="sv-h">ScanVault</h2></div>
         <p class="sub">Scan any trading card and know what it's worth — then shelve it in your digital binder. One binder per TCG series, your whole collection organized, valued, and always with you. Unlimited free single-card scans, live market prices, pull-rate odds, and a $24.99 one-time Pro — never a subscription.</p>
         <p class="sub">We're developers who collect. Every feature ships only if we'd want it in our own binders — honest prices, real odds, and tools that treat your collection like it matters. Because it does.</p>
         <ul class="feat">
@@ -333,7 +337,7 @@ footer{border-top:1px solid var(--line);padding:clamp(64px,8vw,110px) 0 40px;pos
     <article class="app-block rv" id="hollowreign" aria-labelledby="hr-h">
       <div class="app-copy">
         <p class="kicker ember">In development</p>
-        <h2 id="hr-h">Hollowreign</h2>
+        <div class="app-head"><img class="app-logo" src="screenshots/hollowreign-logo.png" alt="Hollowreign app logo" width="64" height="64"><h2 id="hr-h">Hollowreign</h2></div>
         <p class="sub">A dark-fantasy tower-defense saga. Collect guardian cards as towers, name your Warden, hold the breach — every victory earns a card.</p>
         <ul class="hr-points">
           <li><span class="e" aria-hidden="true">◆</span><span><b>Guardian cards are your towers</b> — twelve guardians to collect and command.</span></li>
@@ -351,7 +355,7 @@ footer{border-top:1px solid var(--line);padding:clamp(64px,8vw,110px) 0 40px;pos
     <article class="app-block rv" id="outbreak" aria-labelledby="ob-h">
       <div class="app-copy">
         <p class="kicker ember">Coming soon to Roblox</p>
-        <h2 id="ob-h">OUTBREAK</h2>
+        <div class="app-head"><img class="app-logo" src="screenshots/outbreak-icon.png" alt="OUTBREAK game icon" width="64" height="64"><h2 id="ob-h">OUTBREAK</h2></div>
         <p class="sub">A zombie survival extraction game. Cross a massive living city, scavenge weapons, fight your way to the helicopter — and if you die, you don't respawn. You join them. Hunt your friends as one of the infected.</p>
         <ul class="hr-points">
           <li><span class="e" aria-hidden="true">◆</span><span><b>Die and you join them</b> — death means respawning as infected, hunting your friends.</span></li>
@@ -370,7 +374,7 @@ footer{border-top:1px solid var(--line);padding:clamp(64px,8vw,110px) 0 40px;pos
     <article class="app-block rv" id="morningmission" aria-labelledby="mm-h">
       <div class="app-copy">
         <p class="kicker gold">Coming soon</p>
-        <h2 id="mm-h">MorningMission</h2>
+        <div class="app-head"><img class="app-logo" src="screenshots/morningmission-icon.webp" alt="MorningMission app icon" width="64" height="64"><h2 id="mm-h">MorningMission</h2></div>
         <p class="sub">An alarm that only turns off when you finish a mission. No snooze trap — dance, push-ups, maths, a photo match, or a wolf howl, and you are actually out of bed.</p>
         <ul class="hr-points">
           <li><span class="e" aria-hidden="true">◆</span><span><b>29 missions</b> — move, brain, camera, voice and tap missions, each under 60 seconds.</span></li>
