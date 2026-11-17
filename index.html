@@ -13,19 +13,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>True North Interactive — Apps Worth Collecting</title>
-<meta name="description" content="True North Interactive is an independent app studio building ScanVault, the trading-card scanner collectors deserve, Hollowreign, a dark-fantasy card saga, MorningMission, an alarm that only turns off when you finish a mission, and OUTBREAK, a zombie survival game coming to Roblox.">
+<meta name="description" content="True North Interactive is an independent app studio building ScanVault, the trading-card scanner collectors deserve, Hollowreign, a dark-fantasy card saga, MorningMission, an alarm that only turns off when you finish a mission, OUTBREAK, a zombie survival game coming to Roblox, and Point Fingers, a who's-most-likely-to party game you can play right now on the web.">
 <link rel="canonical" href="https://truenorth-interactive.ca/">
 <link rel="icon" type="image/png" href="tni-mark.png">
 <link rel="apple-touch-icon" href="tni-mark.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="True North Interactive">
 <meta property="og:title" content="True North Interactive — Apps Worth Collecting">
-<meta property="og:description" content="Independent app studio building ScanVault, the trading-card scanner collectors deserve, Hollowreign, a dark-fantasy card saga, MorningMission, an alarm that only turns off when you finish a mission, and OUTBREAK, a zombie survival game coming to Roblox.">
+<meta property="og:description" content="Independent app studio building ScanVault, the trading-card scanner collectors deserve, Hollowreign, a dark-fantasy card saga, MorningMission, an alarm that only turns off when you finish a mission, OUTBREAK, a zombie survival game coming to Roblox, and Point Fingers, a who's-most-likely-to party game you can play right now on the web.">
 <meta property="og:url" content="https://truenorth-interactive.ca/">
 <meta property="og:image" content="https://truenorth-interactive.ca/screenshots/hollowreign-keyart.webp">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="True North Interactive — Apps Worth Collecting">
-<meta name="twitter:description" content="Independent app studio building ScanVault, the trading-card scanner collectors deserve, Hollowreign, a dark-fantasy card saga, MorningMission, an alarm that only turns off when you finish a mission, and OUTBREAK, a zombie survival game coming to Roblox.">
+<meta name="twitter:description" content="Independent app studio building ScanVault, the trading-card scanner collectors deserve, Hollowreign, a dark-fantasy card saga, MorningMission, an alarm that only turns off when you finish a mission, OUTBREAK, a zombie survival game coming to Roblox, and Point Fingers, a who's-most-likely-to party game you can play right now on the web.">
 <meta name="twitter:image" content="https://truenorth-interactive.ca/screenshots/hollowreign-keyart.webp">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"True North Interactive","url":"https://truenorth-interactive.ca/","sameAs":["https://www.youtube.com/@truenorthinteractive","https://www.instagram.com/truenorth.interactive/","https://www.tiktok.com/@truenorthinteractive"]}
@@ -54,7 +54,7 @@ a{color:var(--cyan)}
 section{padding:clamp(72px,10vw,144px) 0}
 h1,h2,h3,.d{font-family:var(--font-d);font-weight:800;letter-spacing:-.03em;line-height:1.04;text-wrap:balance}
 .kicker{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;font-weight:600;letter-spacing:.22em;color:var(--cyan);text-transform:uppercase;margin-bottom:20px}
-.kicker.gold{color:var(--gold)} .kicker.ember{color:var(--ember)}
+.kicker.gold{color:var(--gold)} .kicker.ember{color:var(--ember)} .kicker.magenta{color:#ff2e88}
 .sub{color:var(--mut);font-size:clamp(16px,1.6vw,18px);max-width:60ch;text-wrap:pretty}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--font-b);font-weight:600;font-size:16px;padding:15px 30px;border-radius:16px;text-decoration:none;cursor:pointer;border:0;transition:transform .18s ease,box-shadow .18s ease}
 .btn-gold{background:var(--gold);color:#1a1405;box-shadow:0 8px 28px rgba(242,183,60,.28)}
@@ -83,15 +83,16 @@ h1,h2,h3,.d{font-family:var(--font-d);font-weight:800;letter-spacing:-.03em;line
 .hero h1 .hl{color:var(--gold)}
 .hero .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
 .hero-card-stage{display:flex;justify-content:center;perspective:1100px}
-/* ---------- hero product tiles (all four products, equal weight) ---------- */
+/* ---------- hero product tiles (all five products, equal weight) ---------- */
 .hero-tiles{display:grid;grid-template-columns:1fr 1fr;gap:14px;width:100%;max-width:440px}
 .htile{display:block;text-decoration:none;color:var(--txt);background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:18px 18px 16px;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
 .htile:hover{transform:translateY(-3px);border-color:rgba(83,219,255,.45);box-shadow:var(--shadow)}
 .htile .ht-kicker{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:10.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);margin-bottom:8px}
-.htile .ht-kicker.ember{color:var(--ember)} .htile .ht-kicker.gold{color:var(--gold)}
+.htile .ht-kicker.ember{color:var(--ember)} .htile .ht-kicker.gold{color:var(--gold)} .htile .ht-kicker.magenta{color:#ff2e88}
 .htile h3{font-size:19px;letter-spacing:-.01em;margin-bottom:4px}
 .htile p{font-size:13.5px;line-height:1.45;color:var(--mut)}
 .htile .ht-status{display:inline-block;margin-top:12px;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--txt);border:1px solid var(--line);border-radius:999px;padding:4px 10px}
+.htile:last-child{grid-column:1 / -1}
 /* holographic card */
 .holo-card{position:relative;width:min(320px,72vw);aspect-ratio:5/7;border-radius:22px;
   background:linear-gradient(150deg,#141b3a 0%,#0d1226 45%,#1a1440 100%);
@@ -165,6 +166,7 @@ h1,h2,h3,.d{font-family:var(--font-d);font-weight:800;letter-spacing:-.03em;line
 .hr-points li{display:flex;gap:12px;align-items:baseline;color:var(--mut);font-size:15.5px}
 .hr-points li b{color:var(--txt)}
 .hr-points .e{color:var(--ember);flex:none}
+.hr-points.magenta .e{color:#ff2e88}
 /* ---------- studio ---------- */
 #studio .studio-card{background:var(--bg2);border:1px solid var(--line);border-radius:22px;padding:clamp(32px,5vw,64px);box-shadow:var(--shadow);position:relative;overflow:hidden}
 #studio .studio-card::before{content:'';position:absolute;inset:0;background:radial-gradient(600px 300px at 85% 0%,rgba(83,219,255,.06),transparent 60%);pointer-events:none}
@@ -242,7 +244,7 @@ footer{border-top:1px solid var(--line);padding:clamp(64px,8vw,110px) 0 40px;pos
     <div>
       <p class="kicker hero-enter">Independent app studio — Ajax, Ontario</p>
       <h1 id="hero-h" class="hero-enter d1">Apps worth <span class="hl">collecting.</span></h1>
-      <p class="sub hero-enter d2">True North Interactive is an independent studio building ScanVault, the trading-card scanner and digital binder collectors deserve — Hollowreign, a dark-fantasy saga where every victory earns a card — MorningMission, an alarm that only turns off when you finish a mission — and OUTBREAK, a zombie survival game coming soon to Roblox.</p>
+      <p class="sub hero-enter d2">True North Interactive is an independent studio building ScanVault, the trading-card scanner and digital binder collectors deserve — Hollowreign, a dark-fantasy saga where every victory earns a card — MorningMission, an alarm that only turns off when you finish a mission — OUTBREAK, a zombie survival game coming soon to Roblox — and Point Fingers, a who's-most-likely-to party game you can play right now in your browser.</p>
       <div class="cta-row hero-enter d3">
         <a class="btn btn-gold" href="#apps">Explore the apps</a>
         <a class="btn btn-ghost" href="#contact">Follow the journey</a>
@@ -273,6 +275,12 @@ footer{border-top:1px solid var(--line);padding:clamp(64px,8vw,110px) 0 40px;pos
         <p>An alarm that only stops when the mission is done.</p>
         <span class="ht-status">In testing</span>
       </a>
+      <a class="htile" href="#pointfingers">
+        <div class="ht-kicker magenta">Party game</div>
+        <h3>Point Fingers</h3>
+        <p>Point at who fits the question. Pass the phone, take the roast.</p>
+        <span class="ht-status">Play now on the web</span>
+      </a>
     </nav>
   </div>
 </section>
@@ -280,7 +288,7 @@ footer{border-top:1px solid var(--line);padding:clamp(64px,8vw,110px) 0 40px;pos
 <!-- ================= TRUST STRIP ================= -->
 <div class="trust" role="list" aria-label="Studio facts">
   <div class="wrap trust-row">
-    <span class="trust-item" role="listitem"><svg viewBox="0 0 24 24" fill="none" stroke="#53dbff" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 21.5 12 12 21.5 2.5 12Z"/></svg>Four products, one studio</span>
+    <span class="trust-item" role="listitem"><svg viewBox="0 0 24 24" fill="none" stroke="#53dbff" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 21.5 12 12 21.5 2.5 12Z"/></svg>Five products, one studio</span>
     <span class="trust-item" role="listitem"><svg viewBox="0 0 24 24" fill="none" stroke="#53dbff" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 21.5 12 12 21.5 2.5 12Z"/></svg>One-time pricing — no subscriptions</span>
     <span class="trust-item" role="listitem"><svg viewBox="0 0 24 24" fill="none" stroke="#53dbff" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5 21.5 12 12 21.5 2.5 12Z"/></svg>Independent — Ajax, Ontario</span>
   </div>
@@ -290,8 +298,8 @@ footer{border-top:1px solid var(--line);padding:clamp(64px,8vw,110px) 0 40px;pos
 <section id="apps" aria-label="Our apps" style="padding-top:clamp(56px,7vw,96px)">
   <div class="wrap">
     <p class="kicker rv">The lineup</p>
-    <h2 class="rv" style="font-size:clamp(2.2rem,4.6vw,3.4rem);margin-bottom:16px">Four apps. One studio.</h2>
-    <p class="sub rv" style="margin-bottom:clamp(32px,4vw,56px)">One in beta, one in testing, two in development — each built around collecting something: cards, guardians, missions, or survival.</p>
+    <h2 class="rv" style="font-size:clamp(2.2rem,4.6vw,3.4rem);margin-bottom:16px">Five apps. One studio.</h2>
+    <p class="sub rv" style="margin-bottom:clamp(32px,4vw,56px)">One in beta, one in testing, one playable now, two in development — each built around collecting something: cards, guardians, missions, survival, or bragging rights.</p>
 
     <article class="app-block rv" id="scanvault" aria-labelledby="sv-h">
       <div class="app-copy">
@@ -393,6 +401,27 @@ footer{border-top:1px solid var(--line);padding:clamp(64px,8vw,110px) 0 40px;pos
       </figure>
     </article>
 
+    <article class="app-block rv" id="pointfingers" aria-labelledby="pf-h">
+      <div class="app-copy">
+        <p class="kicker magenta">Play now on the web</p>
+        <div class="app-head"><img class="app-logo" src="screenshots/pointfingers-icon.png" alt="Point Fingers app icon" width="64" height="64"><h2 id="pf-h">Point Fingers</h2></div>
+        <p class="sub">The who's-most-likely-to party game. A question drops, everyone points at who fits best — the most-pointed-at player takes the roast, and the night ends with an Awards Show. Pass the phone, no install needed.</p>
+        <p class="sub">Eight editions — Kids, Family, Sports, Teens, Friends, Work, Adults, Spicy. The host picks one sealed edition per room, and it stays sealed all night.</p>
+        <ul class="hr-points magenta">
+          <li><span class="e" aria-hidden="true">◆</span><span><b>Know Me, Twists and Stakes</b> — secret answers, dare cards and a twist keep every round moving.</span></li>
+          <li><span class="e" aria-hidden="true">◆</span><span><b>An Awards Show to close the night</b> — Most Pointed At, Under the Radar, and more, fit to the edition.</span></li>
+          <li><span class="e" aria-hidden="true">◆</span><span><b>Guests join free</b> — the host's link opens in any phone browser. No install, no account.</span></li>
+          <li><span class="e" aria-hidden="true">◆</span><span><b>Earnable ScanVault cards</b> — play well and take home real collector cards for your ScanVault binder.</span></li>
+        </ul>
+        <p style="margin-top:26px"><span class="pill"><span class="pulse" aria-hidden="true"></span>Play now — free on the web</span></p>
+        <p class="launch-note">Play now at <a href="https://point-fingers.pages.dev" target="_blank" rel="noopener">point-fingers.pages.dev</a>. The Android app is coming to Google Play. Kids is free to host; a one-time Host Pass ($4.99 at launch, $9.99 after) unlocks hosting the other seven editions. No subscription, ever.</p>
+      </div>
+      <figure class="keyart">
+        <img src="screenshots/pointfingers-icon.png" alt="Point Fingers app icon — a white fist bursting from a magenta starburst" loading="lazy" width="512" height="512">
+        <figcaption>App icon<span>Point Fingers, play now on the web</span></figcaption>
+      </figure>
+    </article>
+
   </div>
 </section>
 
@@ -401,10 +430,10 @@ footer{border-top:1px solid var(--line);padding:clamp(64px,8vw,110px) 0 40px;pos
   <div class="wrap">
     <div class="studio-card rv">
       <p class="kicker">The studio</p>
-      <h2 id="studio-h">Small studio,<br>four ways to play.</h2>
-      <p>True North Interactive is an independent app studio in Ajax, Ontario. We don't make one kind of app — we make the ones we wanted to exist: a scanner that treats your cards like they matter, a tower-defense saga where every victory earns a card, an alarm that actually gets you out of bed, and a zombie city where dying doesn't end the game — it changes sides.</p>
-      <p><b><a href="#scanvault">ScanVault</a></b> — collect and value your cards. <b><a href="#hollowreign">Hollowreign</a></b> — collect guardians and hold the breach. <b><a href="#morningmission">MorningMission</a></b> — earn a card by finishing a morning mission. <b><a href="#outbreak">OUTBREAK</a></b> — survive the city, extract, or join the infected.</p>
-      <p>The same creed runs through all four: free tiers that are actually useful, one-time pricing instead of subscriptions, no dark patterns. Every feature ships only if we'd want it ourselves.</p>
+      <h2 id="studio-h">Small studio,<br>five ways to play.</h2>
+      <p>True North Interactive is an independent app studio in Ajax, Ontario. We don't make one kind of app — we make the ones we wanted to exist: a scanner that treats your cards like they matter, a tower-defense saga where every victory earns a card, an alarm that actually gets you out of bed, a zombie city where dying doesn't end the game — it changes sides — and a party game where the whole room points at who fits.</p>
+      <p><b><a href="#scanvault">ScanVault</a></b> — collect and value your cards. <b><a href="#hollowreign">Hollowreign</a></b> — collect guardians and hold the breach. <b><a href="#morningmission">MorningMission</a></b> — earn a card by finishing a morning mission. <b><a href="#outbreak">OUTBREAK</a></b> — survive the city, extract, or join the infected. <b><a href="#pointfingers">Point Fingers</a></b> — point at who fits, take the roast.</p>
+      <p>The same creed runs through all five: free tiers that are actually useful, one-time pricing instead of subscriptions, no dark patterns. Every feature ships only if we'd want it ourselves.</p>
     </div>
   </div>
 </section>
