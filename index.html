@@ -13,19 +13,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>True North Interactive — Apps Worth Collecting</title>
-<meta name="description" content="True North Interactive is an independent app studio building ScanVault, the trading-card scanner collectors deserve, Hollowreign, a dark-fantasy card saga, MorningMission, an alarm that only turns off when you finish a mission, OUTBREAK, a zombie survival game coming to Roblox, and Point Fingers, a who's-most-likely-to party game you can play right now on the web — plus On This Day, a new animated history story every day.">
+<meta name="description" content="True North Interactive is an independent app studio building ScanVault, the trading-card scanner collectors deserve, Hollowreign, a dark-fantasy card saga, MorningMission, an alarm that only turns off when you finish a mission, OUTBREAK, a zombie survival game live now on Roblox, and Point Fingers, a who's-most-likely-to party game you can play right now on the web — plus On This Day, a new animated history story every day.">
 <link rel="canonical" href="https://truenorth-interactive.ca/">
 <link rel="icon" type="image/png" href="tni-mark.png">
 <link rel="apple-touch-icon" href="tni-mark.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="True North Interactive">
 <meta property="og:title" content="True North Interactive — Apps Worth Collecting">
-<meta property="og:description" content="Independent app studio building ScanVault, the trading-card scanner collectors deserve, Hollowreign, a dark-fantasy card saga, MorningMission, an alarm that only turns off when you finish a mission, OUTBREAK, a zombie survival game coming to Roblox, and Point Fingers, a who's-most-likely-to party game you can play right now on the web — plus On This Day, a new animated history story every day.">
+<meta property="og:description" content="Independent app studio building ScanVault, the trading-card scanner collectors deserve, Hollowreign, a dark-fantasy card saga, MorningMission, an alarm that only turns off when you finish a mission, OUTBREAK, a zombie survival game live now on Roblox, and Point Fingers, a who's-most-likely-to party game you can play right now on the web — plus On This Day, a new animated history story every day.">
 <meta property="og:url" content="https://truenorth-interactive.ca/">
 <meta property="og:image" content="https://truenorth-interactive.ca/screenshots/hollowreign-keyart.webp">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="True North Interactive — Apps Worth Collecting">
-<meta name="twitter:description" content="Independent app studio building ScanVault, the trading-card scanner collectors deserve, Hollowreign, a dark-fantasy card saga, MorningMission, an alarm that only turns off when you finish a mission, OUTBREAK, a zombie survival game coming to Roblox, and Point Fingers, a who's-most-likely-to party game you can play right now on the web — plus On This Day, a new animated history story every day.">
+<meta name="twitter:description" content="Independent app studio building ScanVault, the trading-card scanner collectors deserve, Hollowreign, a dark-fantasy card saga, MorningMission, an alarm that only turns off when you finish a mission, OUTBREAK, a zombie survival game live now on Roblox, and Point Fingers, a who's-most-likely-to party game you can play right now on the web — plus On This Day, a new animated history story every day.">
 <meta name="twitter:image" content="https://truenorth-interactive.ca/screenshots/hollowreign-keyart.webp">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Organization","name":"True North Interactive","url":"https://truenorth-interactive.ca/","sameAs":["https://www.youtube.com/@truenorthinteractive","https://www.youtube.com/@thisdaydaily","https://www.instagram.com/truenorth.interactive/","https://www.tiktok.com/@truenorthinteractive"]}
@@ -61,12 +61,16 @@ h1,h2,h3,.d{font-family:var(--font-d);font-weight:800;letter-spacing:-.03em;line
 .btn-gold:hover{transform:translateY(-2px);box-shadow:0 12px 34px rgba(242,183,60,.36)}
 .btn-ghost{background:transparent;color:var(--txt);border:1px solid var(--line)}
 .btn-ghost:hover{border-color:rgba(255,255,255,.28);transform:translateY(-2px)}
-.spotify-link{display:inline-flex;align-items:center;gap:12px;background:#000;border:1px solid var(--line);border-radius:16px;padding:12px 18px;text-decoration:none;color:var(--txt);font-weight:600}
+.spotify-link{display:inline-flex;align-items:center;flex-wrap:wrap;gap:12px;background:#000;border:1px solid var(--line);border-radius:16px;padding:12px 18px;text-decoration:none;color:var(--txt);font-weight:600}
 .spotify-link img{height:28px;width:auto;display:block}
 .spotify-link:hover{border-color:rgba(29,185,84,.6);transform:translateY(-2px)}
 .pill{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:9px 18px;border-radius:999px;border:1px solid var(--line);color:var(--mut);background:rgba(255,255,255,.03)}
 .pill .pulse{width:8px;height:8px;border-radius:50%;background:var(--cyan);box-shadow:0 0 10px var(--cyan);animation:pulse 2.2s ease-in-out infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+/* ---------- no horizontal overflow on narrow screens ---------- */
+.hero-grid > *, .app-block > *{min-width:0}
+.htile{min-width:0}
+.htile h3, .app-head h2{overflow-wrap:break-word}
 /* ---------- nav ---------- */
 .nav{position:sticky;top:0;z-index:100;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);background:rgba(11,14,26,.72);border-bottom:1px solid var(--line)}
 .nav-in{display:flex;align-items:center;justify-content:space-between;height:68px}
@@ -209,7 +213,7 @@ footer{border-top:1px solid var(--line);padding:clamp(64px,8vw,110px) 0 40px;pos
   .hero-card-stage{order:-1}
   .holo-card{width:min(240px,64vw)}
   .app-block{grid-template-columns:1fr;gap:44px}
-  .phone{width:min(230px,44vw)}
+  .phone{width:min(230px,42vw)}
   .phone:nth-child(2){margin-top:28px}
 }
 @media (max-width:520px){
@@ -217,6 +221,7 @@ footer{border-top:1px solid var(--line);padding:clamp(64px,8vw,110px) 0 40px;pos
   .brand{font-size:15px}
   .btn{width:100%}
   .hero .cta-row{flex-direction:column}
+  .app-copy h2{font-size:2rem}
 }
 </style>
 </head>
@@ -244,7 +249,7 @@ footer{border-top:1px solid var(--line);padding:clamp(64px,8vw,110px) 0 40px;pos
     <div>
       <p class="kicker hero-enter">Independent app studio — Ajax, Ontario</p>
       <h1 id="hero-h" class="hero-enter d1">Apps worth <span class="hl">collecting.</span></h1>
-      <p class="sub hero-enter d2">True North Interactive is an independent studio building ScanVault, the trading-card scanner and digital binder collectors deserve — Hollowreign, a dark-fantasy saga where every victory earns a card — MorningMission, an alarm that only turns off when you finish a mission — OUTBREAK, a zombie survival game coming soon to Roblox — Point Fingers, a who's-most-likely-to party game you can play right now in your browser — and On This Day, a new animated history story every day.</p>
+      <p class="sub hero-enter d2">True North Interactive is an independent studio building ScanVault, the trading-card scanner and digital binder collectors deserve — Hollowreign, a dark-fantasy saga where every victory earns a card — MorningMission, an alarm that only turns off when you finish a mission — OUTBREAK, a zombie survival game live now on Roblox — Point Fingers, a who's-most-likely-to party game you can play right now in your browser — and On This Day, a new animated history story every day.</p>
       <div class="cta-row hero-enter d3">
         <a class="btn btn-gold" href="#apps">Explore the apps</a>
         <a class="btn btn-ghost" href="#contact">Follow the journey</a>
@@ -267,11 +272,11 @@ footer{border-top:1px solid var(--line);padding:clamp(64px,8vw,110px) 0 40px;pos
         <div class="ht-kicker ember">Roblox survival</div>
         <h3>OUTBREAK</h3>
         <p>Cross the city, extract — or die and join them.</p>
-        <span class="ht-status">Coming to Roblox</span>
+        <span class="ht-status">Live on Roblox</span>
       </a>
       <a class="htile" href="#morningmission">
         <div class="ht-kicker gold">Alarm that wakes you</div>
-        <h3>MorningMission</h3>
+        <h3>Morning<wbr>Mission</h3>
         <p>An alarm that only stops when the mission is done.</p>
         <span class="ht-status">In testing</span>
       </a>
@@ -305,7 +310,7 @@ footer{border-top:1px solid var(--line);padding:clamp(64px,8vw,110px) 0 40px;pos
   <div class="wrap">
     <p class="kicker rv">The lineup</p>
     <h2 class="rv" style="font-size:clamp(2.2rem,4.6vw,3.4rem);margin-bottom:16px">Six apps. One studio.</h2>
-    <p class="sub rv" style="margin-bottom:clamp(32px,4vw,56px)">One in beta, one in testing, one playable now, two in development, one new every day — each built around collecting something: cards, guardians, missions, survival, bragging rights, or a story worth remembering.</p>
+    <p class="sub rv" style="margin-bottom:clamp(32px,4vw,56px)">One in beta, one in testing, two playable now, one in development, one new every day — each built around collecting something: cards, guardians, missions, survival, bragging rights, or a story worth remembering.</p>
 
     <article class="app-block rv" id="scanvault" aria-labelledby="sv-h">
       <div class="app-copy">
@@ -368,7 +373,7 @@ footer{border-top:1px solid var(--line);padding:clamp(64px,8vw,110px) 0 40px;pos
 
     <article class="app-block rv" id="outbreak" aria-labelledby="ob-h">
       <div class="app-copy">
-        <p class="kicker ember">Coming soon to Roblox</p>
+        <p class="kicker ember">Live now on Roblox</p>
         <div class="app-head"><img class="app-logo" src="screenshots/outbreak-icon.png" alt="OUTBREAK game icon" width="64" height="64"><h2 id="ob-h">OUTBREAK</h2></div>
         <p class="sub">A zombie survival extraction game. Cross a massive living city, scavenge weapons, fight your way to the helicopter — and if you die, you don't respawn. You join them. Hunt your friends as one of the infected.</p>
         <ul class="hr-points">
@@ -377,28 +382,29 @@ footer{border-top:1px solid var(--line);padding:clamp(64px,8vw,110px) 0 40px;pos
           <li><span class="e" aria-hidden="true">◆</span><span><b>Pets that fight beside you</b> — dogs, birds, even a dire wolf.</span></li>
           <li><span class="e" aria-hidden="true">◆</span><span><b>Helicopter extraction</b> — make it aboard or lose everything.</span></li>
         </ul>
-        <p style="margin-top:26px"><span class="pill"><span class="pulse" aria-hidden="true"></span>Coming soon to Roblox</span></p>
+        <p style="margin-top:26px"><span class="pill"><span class="pulse" aria-hidden="true"></span>Play now on Roblox</span></p>
+        <p class="launch-note">Play now at <a href="https://www.roblox.com/games/119609872282173/OUTBREAK" target="_blank" rel="noopener">Play OUTBREAK on Roblox</a>.</p>
       </div>
       <figure class="keyart">
         <img src="screenshots/outbreak-poster.png" alt="OUTBREAK poster — a survivor and his Yorkie fleeing a zombie horde through a burning ruined city under a blood-red moon" loading="lazy" width="1024" height="1024">
-        <figcaption>Official poster<span>From the game, in development</span></figcaption>
+        <figcaption>Official poster<span>Live now on Roblox</span></figcaption>
       </figure>
     </article>
 
     <article class="app-block rv" id="morningmission" aria-labelledby="mm-h">
       <div class="app-copy">
-        <p class="kicker gold">Coming soon</p>
-        <div class="app-head"><img class="app-logo" src="screenshots/morningmission-icon.webp" alt="MorningMission app icon" width="64" height="64"><h2 id="mm-h">MorningMission</h2></div>
+        <p class="kicker gold">In testing</p>
+        <div class="app-head"><img class="app-logo" src="screenshots/morningmission-icon.webp" alt="MorningMission app icon" width="64" height="64"><h2 id="mm-h">Morning<wbr>Mission</h2></div>
         <p class="sub">An alarm that only turns off when you finish a mission. No snooze trap — dance, push-ups, maths, a photo match, or a wolf howl, and you are actually out of bed.</p>
         <ul class="hr-points">
-          <li><span class="e" aria-hidden="true">◆</span><span><b>29 missions</b> — move, brain, camera, voice and tap missions, each under 60 seconds.</span></li>
+          <li><span class="e" aria-hidden="true">◆</span><span><b>40 missions</b> — move, brain, camera, voice and tap missions, each under 60 seconds.</span></li>
           <li><span class="e" aria-hidden="true">◆</span><span><b>Surprise me</b> — let the app pick a mission at random each morning.</span></li>
           <li><span class="e" aria-hidden="true">◆</span><span><b>Never trapped</b> — a kind timeout always lets you out, with no scolding.</span></li>
           <li><span class="e" aria-hidden="true">◆</span><span><b>Every mission earns a collector card</b> — complete a mission, collect its card.</span></li>
         </ul>
         <p style="margin-top:26px"><b>Wake up to Spotify</b><br><span style="color:var(--mut)">Connect Spotify in the app and wake up to MorningMission Mornings, our playlist, or your own playlist. A basic Spotify account plays a playlist shuffled, so no Premium is required.</span></p>
         <p style="margin-top:16px"><a class="spotify-link" href="https://open.spotify.com/playlist/45L098TnGzIuAn0O8SBVBh" target="_blank" rel="noopener" aria-label="Open MorningMission Mornings on Spotify"><img src="screenshots/spotify-logo.png" alt="Spotify" width="171" height="47">MorningMission Mornings on Spotify</a></p>
-        <p style="margin-top:26px"><span class="pill"><span class="pulse" aria-hidden="true"></span>Coming soon</span></p>
+        <p style="margin-top:26px"><span class="pill"><span class="pulse" aria-hidden="true"></span>In testing</span></p>
         <p class="launch-note">In testing. Launching on Google Play. <a href="#contact">Follow along</a> for the release date.</p>
       </div>
       <figure class="keyart">
