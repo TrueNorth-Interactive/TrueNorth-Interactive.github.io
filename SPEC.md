@@ -153,12 +153,18 @@ product.
     Status pill: "Watch now — free on YouTube". Watch link (real, live):
     https://www.youtube.com/@thisdaydaily. Also on TikTok
     @truenorthinteractive and Instagram @truenorth.interactive.
-    Visual: REAL footage, not channel art — a looping clip in a phone frame
-    (screenshots/otd-loop.mp4, 5s, 1.2 MB, muted autoplay loop, poster
-    otd-blackbeard.webp — Ep 63, Blackbeard, cannon deck) plus a real
-    archival still (screenshots/otd-stalingrad.webp — Ep 64, Stalingrad).
-    The channel art (screenshots/onthisday-banner.webp) stays in the repo
-    but is no longer on the page.
+    Visual: REAL footage, not channel art — two looping clips in phone
+    frames, both muted autoplay loop with posters: otd-loop.mp4 (5s,
+    1.2 MB — Ep 63, Blackbeard, cannon deck) and otd-nuremberg.mp4
+    (7s, 0.86 MB, poster otd-nuremberg.webp — Ep 61, Nuremberg: real
+    1948 public-domain courtroom footage from "Nuremberg: Its Lesson
+    for Today", defendants in the dock). Fixed Nov 24: the Ep 64
+    Stalingrad still (otd-stalingrad.webp) was captioned "Real footage"
+    but was a picture, not footage — replaced with the Ep 61 clip,
+    which is actual motion footage shipped in the episode. The Ep 64
+    "Battle of Russia" clip was NOT used: real footage, but never in
+    the episode. The channel art (screenshots/onthisday-banner.webp)
+    stays in the repo but is no longer on the page.
 11. **#studio — About**: H2 "Small studio, six ways to play." Copy (real,
     no invented team): the six-product rundown in one paragraph, then the
     linked list — ScanVault (collect and value your cards) · Hollowreign
@@ -253,12 +259,14 @@ right edge. Causes, all fixed and all must stay fixed:
 ## 10. Performance
 - Single HTML file + fonts + screenshots. transform/opacity animations only.
   No frameworks.
-- Media budget (Nov 24): the nine new visual files total ~700 KB
+- Media budget (Nov 24): the eight new visual files total ~630 KB
   (sv-binder 63 KB, sv-scan-result 30 KB, hr-modes 39 KB, hr-saga 88 KB,
-  mm-home 69 KB, mm-mission-crop 63 KB, pf-game 64 KB, pf-create 116 KB,
-  otd-stalingrad 67 KB) plus the looping clip otd-loop.mp4 at 1.23 MB.
-  Below-fold images are loading="lazy"; the video is preload="metadata"
-  with a poster. Nothing multi-MB.
+  mm-home 69 KB, mm-mission-crop 63 KB, pf-game 64 KB, pf-create 116 KB)
+  plus two looping clips: otd-loop.mp4 at 1.23 MB and otd-nuremberg.mp4
+  at 0.86 MB (replaced the 67 KB otd-stalingrad.webp still Nov 24 —
+  it was a picture captioned as footage). Below-fold images are
+  loading="lazy"; the videos are preload="metadata" with posters.
+  Nothing multi-MB.
 
 ## 11. SEO/OG/a11y
 - Title: "True North Interactive — Apps Worth Collecting" (54 chars)
