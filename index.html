@@ -134,6 +134,11 @@ h1,h2,h3,.d{font-family:var(--font-d);font-weight:800;letter-spacing:-.03em;line
 .phone video{width:100%;height:100%;object-fit:cover;object-position:top center;border-radius:30px;display:block;background:var(--bg2)}
 .phone::after{content:'';position:absolute;top:23px;left:50%;transform:translateX(-50%);width:96px;height:20px;background:#05070f;border-radius:11px;z-index:2}
 .phone figcaption{position:absolute;left:0;right:0;bottom:-34px;text-align:center;font-size:12.5px;color:var(--mut);letter-spacing:.04em}
+/* landscape phone frame (sideways, for wide gameplay) */
+.phones.stack{flex-direction:column;align-items:center}
+.phone.land{width:min(560px,100%);aspect-ratio:915/412}
+.phone.land img{object-position:center}
+.phone.land::after{top:50%;left:23px;transform:translateY(-50%);width:20px;height:96px}
 /* hollowreign art */
 .keyart{position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}
 .keyart img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:4/4.6;filter:saturate(1.05)}
@@ -330,10 +335,10 @@ footer{border-top:1px solid var(--line);padding:clamp(64px,8vw,110px) 0 40px;pos
         </ul>
         <p style="margin-top:26px"><span class="pill"><span class="pulse" aria-hidden="true"></span>Coming soon</span></p>
       </div>
-      <div class="phones" aria-label="Hollowreign gameplay screenshots">
-        <figure class="phone" data-tilt>
-          <img src="screenshots/hr-modes.webp" alt="Hollowreign title screen — Story, Survival, Card Duel, Skyfall and Hall of Echoes modes" loading="lazy" width="390" height="844">
-          <figcaption>Real gameplay — the modes screen</figcaption>
+      <div class="phones stack" aria-label="Hollowreign gameplay screenshots">
+        <figure class="phone land" data-tilt>
+          <img src="screenshots/hr-level2-battle.webp" alt="Hollowreign Level 2, Dark Forest — the Warden and guardians holding the campfire against the night horde" loading="lazy" width="915" height="412">
+          <figcaption>Real gameplay — Level 2, the fire level</figcaption>
         </figure>
         <figure class="phone" data-tilt>
           <img src="screenshots/hr-saga.webp" alt="Hollowreign saga map — all five chapters beaten, golden route lines across the world" loading="lazy" width="390" height="844">

@@ -78,11 +78,17 @@ product.
    guardian cards as towers, name your Warden, hold the breach — every
    victory earns a card." 3 points: guardian cards are your towers (twelve
    guardians) · a Warden you name and drive · every victory earns a card.
-   Status pill: "Coming soon". Visual: 2 REAL gameplay screenshots in
-   phone frames (screenshots/hr-modes.webp — the modes screen, Nov 24;
-   screenshots/hr-saga.webp — the saga map, all five chapters beaten,
-   Nov 23). The key art (screenshots/hollowreign-keyart.webp) stays in the
-   repo and is still the OG image, but is no longer on the page.
+   Status pill: "Coming soon". Visual: 2 REAL gameplay screenshots —
+   screenshots/hr-level2-battle.webp — a real Level 2 (Dark Forest) night-1
+   battle in a LANDSCAPE phone frame (.phone.land, 915x412, sideways like
+   the battle plays; the .phones stack vertically for this block), Nov 24,
+   captured headless from the ship file with the Warden + Mauler/Archer/
+   Spark holding the campfire against the horde; and screenshots/hr-saga.webp
+   — the saga map, all five chapters beaten, Nov 23, portrait frame kept.
+   The modes-screen shot (hr-modes.webp) was replaced Nov 24 — Dan: the two
+   shots were menus, not gameplay. The key art (screenshots/hollowreign-
+   keyart.webp) stays in the repo and is still the OG image, but is no
+   longer on the page.
 7. **#apps — OUTBREAK** (id outbreak): kicker "LIVE NOW ON ROBLOX"; H2
    "OUTBREAK". Copy: zombie survival extraction — cross a massive living
    city, scavenge weapons, fight to the helicopter; die and you respawn as
@@ -262,7 +268,8 @@ right edge. Causes, all fixed and all must stay fixed:
 - Media budget (Nov 24): the eight new visual files total ~630 KB
   (sv-binder 63 KB, sv-scan-result 30 KB, hr-modes 39 KB, hr-saga 88 KB,
   mm-home 69 KB, mm-mission-crop 63 KB, pf-game 64 KB, pf-create 116 KB)
-  plus two looping clips: otd-loop.mp4 at 1.23 MB and otd-nuremberg.mp4
+  plus hr-level2-battle.webp 41 KB (Nov 24, replaces hr-modes.webp on the
+  page — hr-modes stays in the repo) plus two looping clips: otd-loop.mp4 at 1.23 MB and otd-nuremberg.mp4
   at 0.86 MB (replaced the 67 KB otd-stalingrad.webp still Nov 24 —
   it was a picture captioned as footage). Below-fold images are
   loading="lazy"; the videos are preload="metadata" with posters.
