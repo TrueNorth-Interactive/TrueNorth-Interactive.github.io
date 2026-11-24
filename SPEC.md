@@ -83,12 +83,23 @@ product.
    battle in a LANDSCAPE phone frame (.phone.land, 915x412, sideways like
    the battle plays; the .phones stack vertically for this block), Nov 24,
    captured headless from the ship file with the Warden + Mauler/Archer/
-   Spark holding the campfire against the horde; and screenshots/hr-saga.webp
-   — the saga map, all five chapters beaten, Nov 23, portrait frame kept.
-   The modes-screen shot (hr-modes.webp) was replaced Nov 24 — Dan: the two
-   shots were menus, not gameplay. The key art (screenshots/hollowreign-
-   keyart.webp) stays in the repo and is still the OG image, but is no
-   longer on the page.
+   Spark holding the campfire against the horde, an enemy ON the fire and
+   damage numbers visible (re-shot Nov 24 — Dan: the first capture read as
+   a quiet camp, enemies far from the fire); and screenshots/hr-level1-
+   battle.webp — a real Level 1 (Vault Keep) wave-1 battle, Nov 24, enemies
+   on the torch-lit road with HP bars, a guardian engaged and damage
+   numbers (-29/-18/-34) visible. The Level 1 frame stays PORTRAIT: the
+   vault chapter is portrait-only in the game (code-proven rotate gate —
+   landscape shows a rotate screen, waves never play), so a portrait frame
+   is the honest one, not a letterbox. It replaces the saga map (hr-saga.
+   webp, a menu, removed from the repo Nov 24 — Dan: show Level 1 playing,
+   not the map). The modes-screen shot (hr-modes.webp) was replaced Nov 24
+   — Dan: the two shots were menus, not gameplay. Nov 24, Dan: NO black
+   camera pill on any phone frame — the .phone::after and .phone.land::
+   after rules are deleted site-wide; every phone frame (all products)
+   shows its image edge to edge inside the frame bezel. The key art
+   (screenshots/hollowreign-keyart.webp) stays in the repo and is still
+   the OG image, but is no longer on the page.
 7. **#apps — OUTBREAK** (id outbreak): kicker "LIVE NOW ON ROBLOX"; H2
    "OUTBREAK". Copy: zombie survival extraction — cross a massive living
    city, scavenge weapons, fight to the helicopter; die and you respawn as
@@ -268,8 +279,10 @@ right edge. Causes, all fixed and all must stay fixed:
 - Media budget (Nov 24): the eight new visual files total ~630 KB
   (sv-binder 63 KB, sv-scan-result 30 KB, hr-modes 39 KB, hr-saga 88 KB,
   mm-home 69 KB, mm-mission-crop 63 KB, pf-game 64 KB, pf-create 116 KB)
-  plus hr-level2-battle.webp 41 KB (Nov 24, replaces hr-modes.webp on the
-  page — hr-modes stays in the repo) plus two looping clips: otd-loop.mp4 at 1.23 MB and otd-nuremberg.mp4
+  plus hr-level2-battle.webp 35 KB (Nov 24, re-shot — replaces the 41 KB
+  first capture on the page) and hr-level1-battle.webp 37 KB (Nov 24,
+  replaces hr-saga.webp on the page — hr-saga removed from the repo;
+  hr-modes stays in the repo) plus two looping clips: otd-loop.mp4 at 1.23 MB and otd-nuremberg.mp4
   at 0.86 MB (replaced the 67 KB otd-stalingrad.webp still Nov 24 —
   it was a picture captioned as footage). Below-fold images are
   loading="lazy"; the videos are preload="metadata" with posters.
