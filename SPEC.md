@@ -1,15 +1,20 @@
-# True North Interactive — company site spec (Nov 23, 2026)
+# True North Interactive — company site spec (Nov 24, 2026)
 
-Rewritten Nov 23, 2026 to match the live site (commit `7a5c0a3`).
-The Oct 12 spec described the two-product launch version; the site has
-grown to six products since, and the spec below is the current truth.
+Rebuilt Nov 24, 2026 (real visuals + premium interactions): every product
+now shows real screenshots or real footage instead of icons/key art, the
+dead holographic-card code is gone, and the tilt + scroll-glow interactions
+are live. The Oct 12 spec described the two-product launch version; the
+site has grown to six products since, and the spec below is the current
+truth.
 
 ## 1. Objective
 Company landing page for True North Interactive, indie app studio. Page type:
 company site with six product sections. Quality bar: type-first, dark,
 premium, TCG-collector aesthetic matching ScanVault's midnight theme.
 One page (index.html) + privacy.html + terms.html. No placeholders — every
-fact real.
+fact real, every visual a real screenshot, real footage, or the product's
+own key art already in use. No stock photos, no AI art standing in for a
+product.
 
 ## 2. Design tokens
 - bg: #0b0e1a (midnight); bg2: #10162e (card); text: #eef1ff; muted: #9aa3c7;
@@ -37,6 +42,7 @@ fact real.
    ScanVault "Now in beta" · Hollowreign "In development" · OUTBREAK
    "Live on Roblox" · MorningMission "In testing" · Point Fingers "Play now
    on the web" · On This Day "Watch on YouTube". No stock photos.
+   A `.hero-glow` layer drifts with scroll (see §6).
 3. **Trust strip** (directly under hero, 3 honest signals): "Six products,
    one studio" · "One-time pricing — no subscriptions" · "Independent —
    Ajax, Ontario". Real facts from the shipped products.
@@ -58,10 +64,13 @@ fact real.
    "How it's built" (3, real): on-device ML Kit OCR (photos never leave
    the phone) · live prices from TCGdex, PriceCharting and more · card
    database and pull rates updated weekly.
-   Status pill: "Coming soon to Google Play". Illustrated scan moment
-   figure (CSS, not a screenshot) + 2 REAL app screenshots
-   (screenshots/price-history-sheet.png, confetti-burst.png — phone
-   screenshots, shown in phone frames).
+   Status pill: "Coming soon to Google Play". 2 REAL app screenshots in
+   phone frames (screenshots/sv-binder.webp — the binder, CA$2,129, nine
+   cards with live prices; screenshots/sv-scan-result.webp — a Charizard
+   card detail, CA$1,104). The old CSS "illustrated scan moment" figure and
+   its CSS are gone (removed Nov 24); the price-history sheet and confetti
+   shots (price-history-sheet.png, confetti-burst.png) stay in the repo but
+   are no longer on the page.
    CTA: none fake — no dead "download" button. Text: "Launching on Google
    Play. Follow along for the release date."
 6. **#apps — Hollowreign** (id hollowreign): kicker "IN DEVELOPMENT"; H2
@@ -69,8 +78,11 @@ fact real.
    guardian cards as towers, name your Warden, hold the breach — every
    victory earns a card." 3 points: guardian cards are your towers (twelve
    guardians) · a Warden you name and drive · every victory earns a card.
-   Status pill: "Coming soon". Visual: official key art
-   (screenshots/hollowreign-keyart.webp).
+   Status pill: "Coming soon". Visual: 2 REAL gameplay screenshots in
+   phone frames (screenshots/hr-modes.webp — the modes screen, Nov 24;
+   screenshots/hr-saga.webp — the saga map, all five chapters beaten,
+   Nov 23). The key art (screenshots/hollowreign-keyart.webp) stays in the
+   repo and is still the OG image, but is no longer on the page.
 7. **#apps — OUTBREAK** (id outbreak): kicker "LIVE NOW ON ROBLOX"; H2
    "OUTBREAK". Copy: zombie survival extraction — cross a massive living
    city, scavenge weapons, fight to the helicopter; die and you respawn as
@@ -79,7 +91,15 @@ fact real.
    fight beside you · helicopter extraction.
    Status pill: "Play now on Roblox". Play link (real, live):
    https://www.roblox.com/games/119609872282173/OUTBREAK
-   Visual: official poster (screenshots/outbreak-poster.png).
+   Visual: official poster (screenshots/outbreak-poster.png) — the ONLY
+   product still shown with key art instead of a real screenshot: every
+   real OUTBREAK gameplay frame in the workspace is defaced by QA
+   annotation boxes or a giant DIAGNOSTICS panel. A clean shot needs a
+   fresh capture from Dan's phone with diagnostics off.
+   KNOWN GAP (Nov 24): the poster art itself has "COMING SOON TO ROBLOX"
+   baked into the image, which contradicts the "Live now on Roblox" copy
+   and caption. Do not edit the art; the poster needs replacing when new
+   art exists.
 8. **#apps — MorningMission** (id morningmission): kicker "IN TESTING"; H2
    "Morning<wbr>Mission" (the <wbr> break is load-bearing — see §9).
    Copy: "An alarm that only turns off when you finish a mission. No snooze
@@ -92,8 +112,13 @@ fact real.
    (https://open.spotify.com/playlist/45L098TnGzIuAn0O8SBVBh); a basic
    Spotify account plays a playlist shuffled, so no Premium is required.
    Status pill: "In testing". Text: "In testing. Launching on Google Play.
-   Follow along for the release date." Visual: app icon
-   (screenshots/morningmission-icon.webp).
+   Follow along for the release date." Visual: 2 REAL app screenshots in
+   phone frames (screenshots/mm-home.webp — home, next alarm 7:00 AM;
+   screenshots/mm-mission-crop.webp — a Tic-Tac-Toe mission ringing).
+   mm-mission-crop is the Tester capture with the bottom cropped and padded
+   to phone aspect so the "Stop test alarm" label never shows. The app icon
+   (screenshots/morningmission-icon.webp) stays as the small section logo
+   only.
 9. **#apps — Point Fingers** (id pointfingers): kicker "PLAY NOW ON THE
    WEB"; H2 "Point Fingers". Copy: "The who's-most-likely-to party game.
    A question drops, everyone points at who fits best — the most-pointed-at
@@ -106,8 +131,16 @@ fact real.
    Status pill: "Play now — free on the web". Play link (real, live):
    https://point-fingers.pages.dev. Pricing line: Kids is free to host; a
    one-time Host Pass ($4.99 at launch, $9.99 after) unlocks hosting the
-   other seven editions. No subscription, ever. Visual: app icon
-   (screenshots/pointfingers-icon.png).
+   other seven editions. No subscription, ever. Visual: 2 REAL game
+   screenshots in phone frames (screenshots/pf-game.webp — a live Kids
+   round, Round 1 of 12; screenshots/pf-create.webp — the Create Game
+   screen with all eight editions). Captured from the local v31 build
+   (same build as live; the live site was verified booting, the shots were
+   taken locally because the VM egress proxy stalls the live site). The app
+   icon (screenshots/pointfingers-icon.png) stays as the small section logo
+   only. NOT captured: the Awards Show — driving a full 12-round game
+   headless stalls on the vote-tally screen (room sync to the worker hangs
+   through the proxy); needs a real phone.
 10. **#apps — On This Day** (id onthisday): kicker "NEW EVERY DAY"; H2
     "On This Day". Copy: "History happened today. Every day, something
     incredible happened on this date — and we tell its story in under 60
@@ -120,8 +153,12 @@ fact real.
     Status pill: "Watch now — free on YouTube". Watch link (real, live):
     https://www.youtube.com/@thisdaydaily. Also on TikTok
     @truenorthinteractive and Instagram @truenorth.interactive.
-    Visual: channel art (screenshots/onthisday-banner.webp, watercolour
-    panorama).
+    Visual: REAL footage, not channel art — a looping clip in a phone frame
+    (screenshots/otd-loop.mp4, 5s, 1.2 MB, muted autoplay loop, poster
+    otd-blackbeard.webp — Ep 63, Blackbeard, cannon deck) plus a real
+    archival still (screenshots/otd-stalingrad.webp — Ep 64, Stalingrad).
+    The channel art (screenshots/onthisday-banner.webp) stays in the repo
+    but is no longer on the page.
 11. **#studio — About**: H2 "Small studio, six ways to play." Copy (real,
     no invented team): the six-product rundown in one paragraph, then the
     linked list — ScanVault (collect and value your cards) · Hollowreign
@@ -166,19 +203,27 @@ fact real.
 ## 6. Motion
 - Reveal-on-scroll: single IntersectionObserver, opacity/translateY only,
   60ms stagger. prefers-reduced-motion: everything static.
-- No scroll-hijack, no parallax, no preloader.
+- Hero glow: a `.hero-glow` layer translates at 0.25x scroll and fades to
+  transparent by 900px scroll — transform/opacity only, rAF-throttled,
+  disabled under reduced motion.
+- No scroll-hijack, no heavy 3D library, no preloader.
 
 ## 7. Signature interaction
-- The Oct 12 holographic tilting card is GONE from the page: the hero now
-  carries six product tiles instead. The tilt script at the bottom of
-  index.html still looks up `#holoCard`, but no such element exists, so it
-  is dead code (guarded null check, harmless). If the tilt ever returns, it
-  needs a real target element again — do not assume the script proves the
-  card exists.
+- Pointer tilt on the real visuals: every `.phone` figure and the OUTBREAK
+  poster carry `data-tilt` (11 elements). Pointermove drives a rAF-lerped
+  rotateX/rotateY, max ~6deg, transform-only; pointerleave eases back to
+  flat. Binds only on pointer:fine devices and never under
+  prefers-reduced-motion. Verified Nov 24 in headless Chrome by exercising
+  the handler directly (rotateX 2.97deg / rotateY 3.56deg at the 0.8/0.2
+  pointer position); the gate correctly keeps it off under touch emulation.
+- The Oct 12 holographic card and its dead `#holoCard` script are GONE —
+  removed Nov 24 along with the unused `.holo-card` CSS and the CSS
+  scan-moment figure. Do not re-add a tilt target without a real element.
 
 ## 8. Placeholder audit (pre-ship)
 - [ ] All live social URLs rendered; X/Facebook still commented out
-- [ ] No lorem ipsum; screenshots are the real app / official art
+- [ ] No lorem ipsum; visuals are real screenshots / real footage / the
+      product's own key art (OUTBREAK poster only — see §3.7)
 - [ ] Status pills match §4 (beta / testing / live / playable / new daily)
 - [ ] privacy.html real policy; terms.html real terms
 
@@ -194,10 +239,26 @@ right edge. Causes, all fixed and all must stay fixed:
 - Verify after any layout change in a real render at 360px and 412px:
   scrollWidth must equal innerWidth at both, and the hero, tiles, OUTBREAK
   and MorningMission sections must be eyeballed, not just measured.
+- Re-verified Nov 24 after the real-visuals rebuild (headless Chrome 157,
+  CDP): 412px and 360px both scrollWidth == innerWidth, the only element
+  past the edge is the intentional off-screen skip link. All 18 images load
+  (complete + naturalWidth), the OTD video reaches readyState 4 and plays.
+- Capture gotcha: `loading="lazy"` images render BLANK in
+  captureBeyondViewport full-page screenshots unless the page is scrolled
+  through first — that is a capture artifact, not a site bug. Force `.rv`
+  visible AND scroll through the page before a full-page capture; the
+  sticky nav may paint mid-page in the composite (also an artifact — it
+  sits correctly at the top in real viewport shots).
 
 ## 10. Performance
 - Single HTML file + fonts + screenshots. transform/opacity animations only.
   No frameworks.
+- Media budget (Nov 24): the nine new visual files total ~700 KB
+  (sv-binder 63 KB, sv-scan-result 30 KB, hr-modes 39 KB, hr-saga 88 KB,
+  mm-home 69 KB, mm-mission-crop 63 KB, pf-game 64 KB, pf-create 116 KB,
+  otd-stalingrad 67 KB) plus the looping clip otd-loop.mp4 at 1.23 MB.
+  Below-fold images are loading="lazy"; the video is preload="metadata"
+  with a poster. Nothing multi-MB.
 
 ## 11. SEO/OG/a11y
 - Title: "True North Interactive — Apps Worth Collecting" (54 chars)

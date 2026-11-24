@@ -86,7 +86,9 @@ h1,h2,h3,.d{font-family:var(--font-d);font-weight:800;letter-spacing:-.03em;line
 .hero h1{font-size:clamp(3rem,9vw,7.5rem);margin:0 0 24px}
 .hero h1 .hl{color:var(--gold)}
 .hero .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
-.hero-card-stage{display:flex;justify-content:center;perspective:1100px}
+.hero-glow{position:absolute;inset:0;pointer-events:none;background:radial-gradient(640px 340px at 72% 12%,rgba(83,219,255,.10),transparent 60%),radial-gradient(520px 340px at 18% 92%,rgba(242,183,60,.08),transparent 60%);will-change:transform}
+/* pointer tilt on real visuals — transform only, rAF-lerped, pointer-fine only */
+[data-tilt]{transform-style:preserve-3d;will-change:transform}
 /* ---------- hero product tiles (all six products, equal weight) ---------- */
 .hero-tiles{display:grid;grid-template-columns:1fr 1fr;gap:14px;width:100%;max-width:440px}
 .htile{display:block;text-decoration:none;color:var(--txt);background:var(--bg2);border:1px solid var(--line);border-radius:18px;padding:18px 18px 16px;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
@@ -97,18 +99,6 @@ h1,h2,h3,.d{font-family:var(--font-d);font-weight:800;letter-spacing:-.03em;line
 .htile p{font-size:13.5px;line-height:1.45;color:var(--mut)}
 .htile .ht-status{display:inline-block;margin-top:12px;font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--txt);border:1px solid var(--line);border-radius:999px;padding:4px 10px}
 .htile:last-child{grid-column:1 / -1}
-/* holographic card */
-.holo-card{position:relative;width:min(320px,72vw);aspect-ratio:5/7;border-radius:22px;
-  background:linear-gradient(150deg,#141b3a 0%,#0d1226 45%,#1a1440 100%);
-  border:2px solid var(--gold);
-  box-shadow:var(--shadow),0 0 70px rgba(242,183,60,.14),inset 0 0 60px rgba(83,219,255,.05);
-  transform-style:preserve-3d;will-change:transform;overflow:hidden}
-.holo-card::before{content:'';position:absolute;inset:0;background:radial-gradient(420px circle at var(--mx,50%) var(--my,38%),rgba(83,219,255,.22),transparent 55%),radial-gradient(300px circle at calc(100% - var(--mx,50%)) calc(100% - var(--my,38%)),rgba(242,183,60,.16),transparent 55%);pointer-events:none}
-.holo-inner{position:absolute;inset:14px;border:1px solid rgba(242,183,60,.4);border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:24px;text-align:center}
-.holo-inner svg{width:54px;height:54px;filter:drop-shadow(0 0 12px rgba(83,219,255,.6))}
-.holo-name{font-family:var(--font-d);font-weight:800;letter-spacing:.28em;font-size:15px;color:var(--gold);padding-left:.28em}
-.holo-sub{font-size:12px;letter-spacing:.18em;color:var(--mut);text-transform:uppercase;padding-left:.18em}
-.holo-foil{position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.09) 45%,transparent 60%);background-size:250% 250%;background-position:calc(var(--mx,50%)) calc(var(--my,40%));pointer-events:none}
 .hero-enter{animation:heroIn .7s cubic-bezier(.2,.7,.2,1) both}
 .hero-enter.d1{animation-delay:.08s}.hero-enter.d2{animation-delay:.16s}.hero-enter.d3{animation-delay:.26s}.hero-enter.d4{animation-delay:.36s}
 @keyframes heroIn{from{opacity:0;transform:translateY(60px)}to{opacity:1;transform:none}}
@@ -141,25 +131,9 @@ h1,h2,h3,.d{font-family:var(--font-d);font-weight:800;letter-spacing:-.03em;line
 .phone{width:min(270px,42vw);aspect-ratio:412/915;background:#05070f;border-radius:40px;padding:11px;border:1px solid rgba(255,255,255,.14);box-shadow:var(--shadow);position:relative;flex:none}
 .phone:nth-child(2){margin-top:44px}
 .phone img{width:100%;height:100%;object-fit:cover;object-position:top center;border-radius:30px;display:block;background:var(--bg2)}
+.phone video{width:100%;height:100%;object-fit:cover;object-position:top center;border-radius:30px;display:block;background:var(--bg2)}
 .phone::after{content:'';position:absolute;top:23px;left:50%;transform:translateX(-50%);width:96px;height:20px;background:#05070f;border-radius:11px;z-index:2}
 .phone figcaption{position:absolute;left:0;right:0;bottom:-34px;text-align:center;font-size:12.5px;color:var(--mut);letter-spacing:.04em}
-/* scan-moment beat */
-.scanbeat{margin-top:34px;max-width:420px}
-.scanview{position:relative;border-radius:18px;border:1px solid var(--line);background:linear-gradient(160deg,#0e1430,#090d1d);aspect-ratio:16/9;overflow:hidden;box-shadow:var(--shadow)}
-.scan-cardback{position:absolute;inset:26px 70px;border-radius:10px;background:linear-gradient(150deg,#1a2148,#0c1128);border:1px solid rgba(242,183,60,.55);display:flex;align-items:center;justify-content:center}
-.scan-cardback span{font-family:var(--font-d);font-weight:700;font-size:12px;letter-spacing:.3em;color:var(--gold);padding-left:.3em}
-.scan-track{position:absolute;left:8%;right:8%;top:10%;bottom:10%;overflow:hidden;pointer-events:none}
-.scan-move{position:absolute;inset:0;animation:scan 3.2s ease-in-out infinite}
-.scan-line{position:absolute;left:0;right:0;top:0;height:2px;background:var(--cyan);box-shadow:0 0 18px var(--cyan)}
-@keyframes scan{0%,100%{transform:translateY(0)}50%{transform:translateY(100%)}}
-.c{position:absolute;width:26px;height:26px;border:3px solid var(--cyan);opacity:.9}
-.c.tl{top:12px;left:12px;border-right:0;border-bottom:0;border-radius:8px 0 0 0}
-.c.tr{top:12px;right:12px;border-left:0;border-bottom:0;border-radius:0 8px 0 0}
-.c.bl{bottom:12px;left:12px;border-right:0;border-top:0;border-radius:0 0 0 8px}
-.c.br{bottom:12px;right:12px;border-left:0;border-top:0;border-radius:0 0 8px 0}
-.scanbeat figcaption{margin-top:12px;font-size:13.5px;color:var(--mut);display:flex;align-items:center;gap:10px}
-.price-chip{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--txt);background:rgba(242,183,60,.1);border:1px solid rgba(242,183,60,.4);padding:7px 14px;border-radius:999px}
-.price-chip .dot{width:7px;height:7px;border-radius:50%;background:#3ddc84;box-shadow:0 0 8px #3ddc84;animation:pulse 2s infinite}
 /* hollowreign art */
 .keyart{position:relative;border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}
 .keyart img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:4/4.6;filter:saturate(1.05)}
@@ -205,13 +179,11 @@ footer{border-top:1px solid var(--line);padding:clamp(64px,8vw,110px) 0 40px;pos
   html{scroll-behavior:auto}
   .rv{opacity:1;transform:none;transition:none}
   .hero-enter{animation:none}
-  .scan-move,.pill .pulse,.price-chip .dot{animation:none}
+  .pill .pulse{animation:none}
 }
 /* ---------- responsive ---------- */
 @media (max-width:900px){
   .hero-grid{grid-template-columns:1fr;gap:56px}
-  .hero-card-stage{order:-1}
-  .holo-card{width:min(240px,64vw)}
   .app-block{grid-template-columns:1fr;gap:44px}
   .phone{width:min(230px,42vw)}
   .phone:nth-child(2){margin-top:28px}
@@ -245,6 +217,7 @@ footer{border-top:1px solid var(--line);padding:clamp(64px,8vw,110px) 0 40px;pos
 <main id="main">
 <!-- ================= HERO ================= -->
 <section class="hero" id="top" aria-labelledby="hero-h">
+  <div class="hero-glow" aria-hidden="true"></div>
   <div class="wrap hero-grid">
     <div>
       <p class="kicker hero-enter">Independent app studio — Ajax, Ontario</p>
@@ -332,23 +305,15 @@ footer{border-top:1px solid var(--line);padding:clamp(64px,8vw,110px) 0 40px;pos
         </div>
         <p><span class="pill" style="margin-top:26px"><span class="pulse" aria-hidden="true"></span>Coming soon to Google Play</span></p>
         <p class="launch-note">Launching on Google Play. <a href="#contact">Follow along</a> for the release date.</p>
-        <figure class="scanbeat" aria-label="Illustrated scan moment">
-          <div class="scanview" aria-hidden="true">
-            <div class="scan-cardback"><span>SCANVAULT</span></div>
-            <div class="scan-track"><div class="scan-move"><div class="scan-line"></div></div></div>
-            <i class="c tl"></i><i class="c tr"></i><i class="c bl"></i><i class="c br"></i>
-          </div>
-          <figcaption><span class="price-chip"><span class="dot"></span>Live market price</span>&nbsp;Illustrated scan moment — the real thing lives in the app.</figcaption>
-        </figure>
       </div>
       <div class="phones" aria-label="ScanVault app screenshots">
-        <figure class="phone">
-          <img src="screenshots/price-history-sheet.png" alt="ScanVault app showing a detailed 30-day price history chart for a trading card" loading="lazy" width="412" height="915">
-          <figcaption>Real price history, per card</figcaption>
+        <figure class="phone" data-tilt>
+          <img src="screenshots/sv-binder.webp" alt="ScanVault app showing Logan's binder — collection value CA$2,129, nine cards with live prices" loading="lazy" width="412" height="915">
+          <figcaption>Your binder, valued live</figcaption>
         </figure>
-        <figure class="phone">
-          <img src="screenshots/confetti-burst.png" alt="ScanVault app celebrating a $1,000 collection milestone with confetti" loading="lazy" width="412" height="915">
-          <figcaption>Collection milestones, celebrated</figcaption>
+        <figure class="phone" data-tilt>
+          <img src="screenshots/sv-scan-result.webp" alt="ScanVault app showing a Dragon Majesty Charizard card detail — CA$1,104, grade and eBay prices" loading="lazy" width="412" height="915">
+          <figcaption>Tap a card — full detail, live prices</figcaption>
         </figure>
       </div>
     </article>
@@ -365,10 +330,16 @@ footer{border-top:1px solid var(--line);padding:clamp(64px,8vw,110px) 0 40px;pos
         </ul>
         <p style="margin-top:26px"><span class="pill"><span class="pulse" aria-hidden="true"></span>Coming soon</span></p>
       </div>
-      <figure class="keyart">
-        <img src="screenshots/hollowreign-keyart.webp" alt="Hollowreign key art — an armored warden holding a torch before a colossal rune-carved vault door in a moonlit forest" loading="lazy" width="760" height="1520">
-        <figcaption>Official key art<span>From the game, in development</span></figcaption>
-      </figure>
+      <div class="phones" aria-label="Hollowreign gameplay screenshots">
+        <figure class="phone" data-tilt>
+          <img src="screenshots/hr-modes.webp" alt="Hollowreign title screen — Story, Survival, Card Duel, Skyfall and Hall of Echoes modes" loading="lazy" width="390" height="844">
+          <figcaption>Real gameplay — the modes screen</figcaption>
+        </figure>
+        <figure class="phone" data-tilt>
+          <img src="screenshots/hr-saga.webp" alt="Hollowreign saga map — all five chapters beaten, golden route lines across the world" loading="lazy" width="390" height="844">
+          <figcaption>Real gameplay — the saga map</figcaption>
+        </figure>
+      </div>
     </article>
 
     <article class="app-block rv" id="outbreak" aria-labelledby="ob-h">
@@ -385,7 +356,7 @@ footer{border-top:1px solid var(--line);padding:clamp(64px,8vw,110px) 0 40px;pos
         <p style="margin-top:26px"><span class="pill"><span class="pulse" aria-hidden="true"></span>Play now on Roblox</span></p>
         <p class="launch-note">Play now at <a href="https://www.roblox.com/games/119609872282173/OUTBREAK" target="_blank" rel="noopener">Play OUTBREAK on Roblox</a>.</p>
       </div>
-      <figure class="keyart">
+      <figure class="keyart" data-tilt>
         <img src="screenshots/outbreak-poster.png" alt="OUTBREAK poster — a survivor and his Yorkie fleeing a zombie horde through a burning ruined city under a blood-red moon" loading="lazy" width="1024" height="1024">
         <figcaption>Official poster<span>Live now on Roblox</span></figcaption>
       </figure>
@@ -407,10 +378,16 @@ footer{border-top:1px solid var(--line);padding:clamp(64px,8vw,110px) 0 40px;pos
         <p style="margin-top:26px"><span class="pill"><span class="pulse" aria-hidden="true"></span>In testing</span></p>
         <p class="launch-note">In testing. Launching on Google Play. <a href="#contact">Follow along</a> for the release date.</p>
       </div>
-      <figure class="keyart">
-        <img src="screenshots/morningmission-icon.webp" alt="MorningMission app icon — a navy alarm clock with arms and legs leaping out of bed under a yellow sunburst" loading="lazy" width="760" height="760">
-        <figcaption>App icon<span>MorningMission, in testing</span></figcaption>
-      </figure>
+      <div class="phones" aria-label="MorningMission app screenshots">
+        <figure class="phone" data-tilt>
+          <img src="screenshots/mm-home.webp" alt="MorningMission home screen — good afternoon greeting, weather card, next alarm 7:00 AM" loading="lazy" width="824" height="1830">
+          <figcaption>Home — your next alarm, at a glance</figcaption>
+        </figure>
+        <figure class="phone" data-tilt>
+          <img src="screenshots/mm-mission-crop.webp" alt="MorningMission ringing — Tic-Tac-Toe mission, your move, 3 by 3 board" loading="lazy" width="824" height="1830">
+          <figcaption>A mission in full swing — Tic-Tac-Toe</figcaption>
+        </figure>
+      </div>
     </article>
 
     <article class="app-block rv" id="pointfingers" aria-labelledby="pf-h">
@@ -428,10 +405,16 @@ footer{border-top:1px solid var(--line);padding:clamp(64px,8vw,110px) 0 40px;pos
         <p style="margin-top:26px"><span class="pill"><span class="pulse" aria-hidden="true"></span>Play now — free on the web</span></p>
         <p class="launch-note">Play now at <a href="https://point-fingers.pages.dev" target="_blank" rel="noopener">point-fingers.pages.dev</a>. The Android app is coming to Google Play. Kids is free to host; a one-time Host Pass ($4.99 at launch, $9.99 after) unlocks hosting the other seven editions. No subscription, ever.</p>
       </div>
-      <figure class="keyart">
-        <img src="screenshots/pointfingers-icon.png" alt="Point Fingers app icon — a white fist bursting from a magenta starburst" loading="lazy" width="512" height="512">
-        <figcaption>App icon<span>Point Fingers, play now on the web</span></figcaption>
-      </figure>
+      <div class="phones" aria-label="Point Fingers game screenshots">
+        <figure class="phone" data-tilt>
+          <img src="screenshots/pf-game.webp" alt="Point Fingers mid-round — Kids edition, Round 1 of 12, who is most likely to make up a secret language, three players voting" loading="lazy" width="824" height="1830">
+          <figcaption>A round in play — Kids edition</figcaption>
+        </figure>
+        <figure class="phone" data-tilt>
+          <img src="screenshots/pf-create.webp" alt="Point Fingers create game screen — all eight editions to pick from, Family to Spicy" loading="lazy" width="824" height="1830">
+          <figcaption>Pick an edition, start the night</figcaption>
+        </figure>
+      </div>
     </article>
 
     <article class="app-block rv" id="onthisday" aria-labelledby="otd-h">
@@ -447,10 +430,16 @@ footer{border-top:1px solid var(--line);padding:clamp(64px,8vw,110px) 0 40px;pos
         <p style="margin-top:26px"><span class="pill"><span class="pulse" aria-hidden="true"></span>Watch now — free on YouTube</span></p>
         <p class="launch-note">Watch now at <a href="https://www.youtube.com/@thisdaydaily" target="_blank" rel="noopener">youtube.com/@thisdaydaily</a>. Also on TikTok @truenorthinteractive and Instagram @truenorth.interactive.</p>
       </div>
-      <figure class="keyart">
-        <img src="screenshots/onthisday-banner.webp" alt="On This Day channel art — a watercolour panorama of pyramids, a castle, sailing ships and a city skyline" loading="lazy" width="1280" height="720">
-        <figcaption>Channel art<span>On This Day, new every day</span></figcaption>
-      </figure>
+      <div class="phones" aria-label="On This Day episode footage">
+        <figure class="phone" data-tilt>
+          <video src="screenshots/otd-loop.mp4" poster="screenshots/otd-blackbeard.webp" autoplay muted loop playsinline preload="metadata" aria-label="Looping clip from the On This Day Blackbeard episode — a cannon fires on a foggy deck"></video>
+          <figcaption>Real footage — Ep 63, Blackbeard</figcaption>
+        </figure>
+        <figure class="phone" data-tilt>
+          <img src="screenshots/otd-stalingrad.webp" alt="On This Day Ep 64 — real archival footage of soldiers advancing through ruined Stalingrad" loading="lazy" width="1080" height="1920">
+          <figcaption>Real footage — Ep 64, Stalingrad</figcaption>
+        </figure>
+      </div>
     </article>
 
   </div>
@@ -516,29 +505,42 @@ footer{border-top:1px solid var(--line);padding:clamp(64px,8vw,110px) 0 40px;pos
 (function(){
   "use strict";
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  /* hero holographic tilt — transform only, rAF, pointer-fine only */
-  var card = document.getElementById('holoCard');
+  /* pointer tilt on real visuals — transform only, rAF-lerped, pointer-fine only */
   var fine = window.matchMedia('(pointer: fine)').matches;
-  if (card && fine && !reduce) {
-    var raf = null, tx = 0, ty = 0, cx = 0, cy = 0;
-    function tick(){
-      cx += (tx - cx) * 0.16; cy += (ty - cy) * 0.16;
-      card.style.transform = 'perspective(1000px) rotateX(' + cy.toFixed(2) + 'deg) rotateY(' + cx.toFixed(2) + 'deg)';
-      if (Math.abs(tx - cx) > 0.04 || Math.abs(ty - cy) > 0.04) { raf = requestAnimationFrame(tick); }
-      else { raf = null; }
+  if (fine && !reduce) {
+    document.querySelectorAll('[data-tilt]').forEach(function(el){
+      var raf = null, tx = 0, ty = 0, cx = 0, cy = 0;
+      function tick(){
+        cx += (tx - cx) * 0.14; cy += (ty - cy) * 0.14;
+        el.style.transform = 'perspective(900px) rotateX(' + cy.toFixed(2) + 'deg) rotateY(' + cx.toFixed(2) + 'deg)';
+        if (Math.abs(tx - cx) > 0.04 || Math.abs(ty - cy) > 0.04) { raf = requestAnimationFrame(tick); }
+        else { raf = null; }
+      }
+      el.addEventListener('pointermove', function(e){
+        var r = el.getBoundingClientRect();
+        var px = (e.clientX - r.left) / r.width, py = (e.clientY - r.top) / r.height;
+        tx = (px - 0.5) * 12; ty = (0.5 - py) * 10; /* max ~6deg */
+        if (!raf) raf = requestAnimationFrame(tick);
+      });
+      el.addEventListener('pointerleave', function(){
+        tx = 0; ty = 0;
+        if (!raf) raf = requestAnimationFrame(tick);
+      });
+    });
+  }
+  /* hero glow drifts with scroll — transform only, one layer */
+  var glow = document.querySelector('.hero-glow');
+  if (glow && !reduce) {
+    var glowRaf = null;
+    function glowTick(){
+      var y = window.scrollY || 0;
+      glow.style.transform = 'translate3d(0,' + (y * 0.25).toFixed(1) + 'px,0)';
+      glow.style.opacity = String(Math.max(0, 1 - y / 900));
+      glowRaf = null;
     }
-    card.addEventListener('pointermove', function(e){
-      var r = card.getBoundingClientRect();
-      var px = (e.clientX - r.left) / r.width, py = (e.clientY - r.top) / r.height;
-      tx = (px - 0.5) * 20; ty = (0.5 - py) * 20; /* max 10deg */
-      card.style.setProperty('--mx', (px * 100).toFixed(1) + '%');
-      card.style.setProperty('--my', (py * 100).toFixed(1) + '%');
-      if (!raf) raf = requestAnimationFrame(tick);
-    });
-    card.addEventListener('pointerleave', function(){
-      tx = 0; ty = 0;
-      if (!raf) raf = requestAnimationFrame(tick);
-    });
+    window.addEventListener('scroll', function(){
+      if (!glowRaf) glowRaf = requestAnimationFrame(glowTick);
+    }, { passive: true });
   }
   /* reveal on scroll — single observer, opacity/translate only, 60ms stagger */
   var els = document.querySelectorAll('.rv');
