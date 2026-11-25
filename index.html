@@ -133,6 +133,15 @@ h1,h2,h3,.d{font-family:var(--font-d);font-weight:800;letter-spacing:-.03em;line
 .phone img{width:100%;height:100%;object-fit:cover;object-position:top center;border-radius:30px;display:block;background:var(--bg2)}
 .phone video{width:100%;height:100%;object-fit:cover;object-position:top center;border-radius:30px;display:block;background:var(--bg2)}
 .phone figcaption{position:absolute;left:0;right:0;bottom:-34px;text-align:center;font-size:12.5px;color:var(--mut);letter-spacing:.04em}
+/* scrollable phone frame (ScanVault home — tall capture scrolls inside) */
+.phone-screen{position:absolute;inset:11px;border-radius:30px;overflow:hidden;background:var(--bg2)}
+.phone-scroll .phone-screen{overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.35) transparent}
+.phone-screen img.tall{width:100%;height:auto;object-fit:none;border-radius:0}
+.phone-screen img.phone-tabbar{position:sticky;bottom:0;left:0;width:100%;height:auto;object-fit:none;border-radius:0;flex:none}
+.phone-cue{position:absolute;left:50%;bottom:76px;transform:translateX(-50%);z-index:3;font-size:11px;letter-spacing:.08em;color:var(--txt);background:rgba(5,7,15,.82);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:4px 10px;pointer-events:none;white-space:nowrap;animation:cuebob 1.8s ease-in-out infinite}
+@keyframes cuebob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(4px)}}
+.phone-screen.scrolled ~ .phone-cue{display:none}
+@media (prefers-reduced-motion: reduce){.phone-cue{animation:none}}
 /* landscape phone frame (sideways, for wide gameplay) */
 .phones.stack{flex-direction:column;align-items:center}
 .phone.land{width:min(560px,100%);aspect-ratio:915/412}
@@ -314,9 +323,13 @@ footer{border-top:1px solid var(--line);padding:clamp(64px,8vw,110px) 0 40px;pos
           <img src="screenshots/sv-binder.webp" alt="ScanVault app showing Logan's binder — collection value CA$2,129, nine cards with live prices" loading="lazy" width="412" height="915">
           <figcaption>Your binder, valued live</figcaption>
         </figure>
-        <figure class="phone" data-tilt>
-          <img src="screenshots/sv-scan-result.webp" alt="ScanVault app showing a Dragon Majesty Charizard card detail — CA$1,104, grade and eBay prices" loading="lazy" width="412" height="915">
-          <figcaption>Tap a card — full detail, live prices</figcaption>
+        <figure class="phone phone-scroll" data-tilt>
+          <div class="phone-screen">
+            <img class="tall" src="screenshots/sv-home.webp" alt="ScanVault app home screen — Pokémon 100 ticker, portfolio, price alerts, wishlist, biggest movers, Grade Worthy, drops, hot products and categories" loading="lazy" width="412" height="2660">
+            <img class="phone-tabbar" src="screenshots/sv-tabbar.webp" alt="" aria-hidden="true" width="412" height="58">
+          </div>
+          <span class="phone-cue" aria-hidden="true">Scroll ↓</span>
+          <figcaption>Home — portfolio, alerts, movers and drops. Scroll inside the phone to see it all.</figcaption>
         </figure>
       </div>
     </article>
@@ -562,6 +575,12 @@ footer{border-top:1px solid var(--line);padding:clamp(64px,8vw,110px) 0 40px;pos
     }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
     els.forEach(function(el){ io.observe(el); });
   }
+  /* scroll cue on the scrollable phone frame — hides once the user scrolls it */
+  document.querySelectorAll('.phone-screen').forEach(function(sc){
+    sc.addEventListener('scroll', function(){
+      if (sc.scrollTop > 24) sc.classList.add('scrolled');
+    }, { passive: true });
+  });
 })();
 </script>
 </body>

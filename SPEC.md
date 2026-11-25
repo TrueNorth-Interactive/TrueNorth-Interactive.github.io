@@ -66,8 +66,17 @@ product.
    database and pull rates updated weekly.
    Status pill: "Coming soon to Google Play". 2 REAL app screenshots in
    phone frames (screenshots/sv-binder.webp — the binder, CA$2,129, nine
-   cards with live prices; screenshots/sv-scan-result.webp — a Charizard
-   card detail, CA$1,104). The old CSS "illustrated scan moment" figure and
+   cards with live prices; screenshots/sv-home.webp — the FULL Home tab,
+   412x2660, scrolling inside the frame with a fixed tab-bar strip
+   screenshots/sv-tabbar.webp and a Scroll cue that hides once scrolled).
+   Home captured Nov 24 from the real app (fresh profile, country set to
+   Canada via Settings so prices read CA$; sample card used so Hot products
+   shows; live Pokémon 100 ticker 988.4). Portfolio reads CA$0.00 — the
+   local run's binder is empty; no values fabricated. Binder flip NOT built
+   (Dan, Nov 24): the real binder is a single 9-pocket page — verified in
+   the app (1 page dot, prev/next hidden) and the local binder is empty
+   (0 cards, also 1 page) — so there are no real extra pages to flip
+   through; no pages fabricated. The old CSS "illustrated scan moment" figure and
    its CSS are gone (removed Nov 24); the price-history sheet and confetti
    shots (price-history-sheet.png, confetti-burst.png) stay in the repo but
    are no longer on the page.
@@ -277,7 +286,7 @@ right edge. Causes, all fixed and all must stay fixed:
 - Single HTML file + fonts + screenshots. transform/opacity animations only.
   No frameworks.
 - Media budget (Nov 24): the eight new visual files total ~630 KB
-  (sv-binder 63 KB, sv-scan-result 30 KB, hr-modes 39 KB, hr-saga 88 KB,
+  (sv-binder 63 KB, sv-home 85 KB, sv-tabbar 3 KB, hr-modes 39 KB, hr-saga 88 KB,
   mm-home 69 KB, mm-mission-crop 63 KB, pf-game 64 KB, pf-create 116 KB)
   plus hr-level2-battle.webp 35 KB (Nov 24, re-shot — replaces the 41 KB
   first capture on the page) and hr-level1-battle.webp 37 KB (Nov 24,
