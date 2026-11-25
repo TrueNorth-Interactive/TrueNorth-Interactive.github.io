@@ -318,15 +318,20 @@ right edge. Causes, all fixed and all must stay fixed:
 - Media budget (Nov 24, updated Nov 25): the eight new visual files total ~630 KB
   (sv-binder 63 KB, sv-home 85 KB, sv-tabbar 3 KB, hr-modes 39 KB, hr-saga 88 KB,
   mm-home 69 KB, mm-mission-crop 63 KB, pf-game 64 KB, pf-create 116 KB)
-  plus hr-level2-battle.webp 35 KB (Nov 24, re-shot — replaces the 41 KB
-  first capture on the page) and hr-level1-battle.webp 37 KB (Nov 24,
-  replaces hr-saga.webp on the page — hr-saga removed from the repo;
-  hr-modes stays in the repo) plus two looping clips: otd-loop.mp4 at 1.23 MB and otd-nuremberg.mp4
+  plus hr-level2-battle.mp4 229 KB (Nov 25, 4.4s loop, poster
+  hr-level2-battle.webp 32 KB — replaces the 35 KB Nov 24 still) and
+  hr-level1-battle.mp4 212 KB (Nov 25, 7.0s loop, poster
+  hr-level1-battle.webp 30 KB — replaces the 37 KB Nov 24 still; the
+  Nov 24 stills replaced hr-saga.webp on the page — hr-saga removed from
+  the repo; hr-modes stays in the repo) plus two looping clips: otd-loop.mp4 at 1.23 MB and otd-nuremberg.mp4
   at 0.86 MB (replaced the 67 KB otd-stalingrad.webp still Nov 24 —
   it was a picture captioned as footage). Nov 25 ScanVault refresh (Dan's
   order): sv-binder-flip.mp4 345 KB (4s loop, poster sv-binder.webp 63 KB,
   now the 27-card page 1) and sv-home.webp 80 KB (412x2382, replaces the
   85 KB 412x2660 Nov 24 capture) and sv-tabbar.webp 3 KB (re-captured).
+  Hollowreign frames are now videos (see item 6): Level 2 caption fixed
+  ("the fire level" → "the Dark Forest") and the frame is a fire-centered
+  night-1 clip; Level 1 is a Vault Keep wave-1 clip.
   Below-fold images are loading="lazy"; the videos are preload="metadata" with posters.
   Nothing multi-MB.
 - Nov 25 change log: `.launch-note a` switched from the border-bottom
