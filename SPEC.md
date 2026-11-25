@@ -69,6 +69,10 @@ product.
    cards with live prices; screenshots/sv-home.webp — the FULL Home tab,
    412x2660, scrolling inside the frame with a fixed tab-bar strip
    screenshots/sv-tabbar.webp and a Scroll cue that hides once scrolled).
+   Both frame images use object-fit:fill — object-fit:none painted them at
+   natural size (cropped/zoomed); the caption is two lines at
+   bottom:-44px so it clears the pinned tab bar (a 4-line caption at
+   bottom:-34px grew upward into the frame and covered it).
    Home captured Nov 24 from the real app (fresh profile, country set to
    Canada via Settings so prices read CA$; sample card used so Hot products
    shows; live Pokémon 100 ticker 988.4). Portfolio reads CA$0.00 — the
