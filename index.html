@@ -136,6 +136,7 @@ h1,h2,h3,.d{font-family:var(--font-d);font-weight:800;letter-spacing:-.03em;line
 /* scrollable phone frame (ScanVault home — tall capture scrolls inside) */
 .phone-screen{position:absolute;inset:11px;border-radius:30px;overflow:hidden;background:var(--bg2)}
 .phone-scroll .phone-screen{overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.35) transparent}
+.phone-scroll figcaption{bottom:-44px}
 .phone-screen img.tall{width:100%;height:auto;object-fit:fill;border-radius:0}
 .phone-screen img.phone-tabbar{position:sticky;bottom:0;left:0;width:100%;height:auto;object-fit:fill;border-radius:0;flex:none}
 .phone-cue{position:absolute;left:50%;bottom:76px;transform:translateX(-50%);z-index:3;font-size:11px;letter-spacing:.08em;color:var(--txt);background:rgba(5,7,15,.82);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:4px 10px;pointer-events:none;white-space:nowrap;animation:cuebob 1.8s ease-in-out infinite}
@@ -329,7 +330,7 @@ footer{border-top:1px solid var(--line);padding:clamp(64px,8vw,110px) 0 40px;pos
             <img class="phone-tabbar" src="screenshots/sv-tabbar.webp" alt="" aria-hidden="true" width="412" height="58">
           </div>
           <span class="phone-cue" aria-hidden="true">Scroll ↓</span>
-          <figcaption>Home — portfolio, alerts, movers and drops. Scroll inside the phone to see it all.</figcaption>
+          <figcaption>Home — portfolio, alerts, movers and drops.</figcaption>
         </figure>
       </div>
     </article>
