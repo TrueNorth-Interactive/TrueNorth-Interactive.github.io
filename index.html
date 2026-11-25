@@ -125,7 +125,7 @@ h1,h2,h3,.d{font-family:var(--font-d);font-weight:800;letter-spacing:-.03em;line
 .craft p b{color:var(--txt);font-weight:600}
 .craft .tick{color:var(--cyan);flex:none}
 .launch-note{margin-top:26px;font-size:15.5px;color:var(--txt)}
-.launch-note a{font-weight:600;text-decoration:none;border-bottom:1px solid var(--cyan)}
+.launch-note a{font-weight:600;text-decoration:underline;text-decoration-color:var(--cyan);text-underline-offset:3px;text-decoration-thickness:1px}
 /* phone frames */
 .phones{display:flex;gap:clamp(14px,2.5vw,28px);justify-content:center;align-items:flex-start}
 .phone{width:min(270px,42vw);aspect-ratio:412/915;background:#05070f;border-radius:40px;padding:11px;border:1px solid rgba(255,255,255,.14);box-shadow:var(--shadow);position:relative;flex:none}
@@ -321,16 +321,16 @@ footer{border-top:1px solid var(--line);padding:clamp(64px,8vw,110px) 0 40px;pos
       </div>
       <div class="phones" aria-label="ScanVault app screenshots">
         <figure class="phone" data-tilt>
-          <img src="screenshots/sv-binder.webp" alt="ScanVault app showing Logan's binder — collection value CA$2,129, nine cards with live prices" loading="lazy" width="412" height="915">
-          <figcaption>Your binder, valued live</figcaption>
+          <video src="screenshots/sv-binder-flip.mp4" poster="screenshots/sv-binder.webp" autoplay muted loop playsinline preload="metadata" aria-label="ScanVault binder demo flipping through three pages — 27 real cards, collection value CA$4,577"></video>
+          <figcaption>Demo binder — 27 real cards, priced Nov 24–25, 2026.</figcaption>
         </figure>
         <figure class="phone phone-scroll" data-tilt>
           <div class="phone-screen">
-            <img class="tall" src="screenshots/sv-home.webp" alt="ScanVault app home screen — Pokémon 100 ticker, portfolio, price alerts, wishlist, biggest movers, Grade Worthy, drops, hot products and categories" loading="lazy" width="412" height="2660">
+            <img class="tall" src="screenshots/sv-home.webp" alt="ScanVault app home screen — portfolio CA$4,577, Pokémon 100 ticker, price alerts, wishlist, biggest movers, Grade Worthy, drops, hot products and categories" loading="lazy" width="412" height="2382">
             <img class="phone-tabbar" src="screenshots/sv-tabbar.webp" alt="" aria-hidden="true" width="412" height="58">
           </div>
           <span class="phone-cue" aria-hidden="true">Scroll ↓</span>
-          <figcaption>Home — portfolio, alerts, movers and drops.</figcaption>
+          <figcaption>Home — portfolio CA$4,577, alerts, movers and drops.</figcaption>
         </figure>
       </div>
     </article>
@@ -347,13 +347,13 @@ footer{border-top:1px solid var(--line);padding:clamp(64px,8vw,110px) 0 40px;pos
         </ul>
         <p style="margin-top:26px"><span class="pill"><span class="pulse" aria-hidden="true"></span>Coming soon</span></p>
       </div>
-      <div class="phones stack" aria-label="Hollowreign gameplay screenshots">
+      <div class="phones stack" aria-label="Hollowreign gameplay videos">
         <figure class="phone land" data-tilt>
-          <img src="screenshots/hr-level2-battle.webp" alt="Hollowreign Level 2, Dark Forest — the Warden and guardians holding the campfire against the night horde" loading="lazy" width="915" height="412">
-          <figcaption>Real gameplay — Level 2, the fire level</figcaption>
+          <video src="screenshots/hr-level2-battle.mp4" poster="screenshots/hr-level2-battle.webp" autoplay muted loop playsinline preload="metadata" aria-label="Hollowreign Level 2, the Dark Forest — night-one camp battle, the Warden and guardians holding the campfire as the horde attacks"></video>
+          <figcaption>Real gameplay — Level 2, the Dark Forest</figcaption>
         </figure>
         <figure class="phone" data-tilt>
-          <img src="screenshots/hr-level1-battle.webp" alt="Hollowreign Level 1, Vault Keep — guardians holding the torch-lit path against the first wave" loading="lazy" width="412" height="915">
+          <video src="screenshots/hr-level1-battle.mp4" poster="screenshots/hr-level1-battle.webp" autoplay muted loop playsinline preload="metadata" aria-label="Hollowreign Level 1, Vault Keep — wave one on the torch-lit path, guardians engaging the enemy line"></video>
           <figcaption>Real gameplay — Level 1, Vault Keep</figcaption>
         </figure>
       </div>

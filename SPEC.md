@@ -64,23 +64,33 @@ product.
    "How it's built" (3, real): on-device ML Kit OCR (photos never leave
    the phone) · live prices from TCGdex, PriceCharting and more · card
    database and pull rates updated weekly.
-   Status pill: "Coming soon to Google Play". 2 REAL app screenshots in
-   phone frames (screenshots/sv-binder.webp — the binder, CA$2,129, nine
-   cards with live prices; screenshots/sv-home.webp — the FULL Home tab,
-   412x2660, scrolling inside the frame with a fixed tab-bar strip
+   Status pill: "Coming soon to Google Play". Left frame is a REAL flip
+   video from the app (screenshots/sv-binder-flip.mp4 — 412x916, 4s, 12fps,
+   muted autoplay loop, poster screenshots/sv-binder.webp): the binder
+   turning twice, page 1 → 2 → 3, 27 cards, collection value CA$4,577.
+   Right frame is the FULL Home tab (screenshots/sv-home.webp — 412x2382,
+   scrolling inside the frame with a fixed tab-bar strip
    screenshots/sv-tabbar.webp and a Scroll cue that hides once scrolled).
    Both frame images use object-fit:fill — object-fit:none painted them at
    natural size (cropped/zoomed); the caption is two lines at
    bottom:-44px so it clears the pinned tab bar (a 4-line caption at
    bottom:-34px grew upward into the frame and covered it).
-   Home captured Nov 24 from the real app (fresh profile, country set to
-   Canada via Settings so prices read CA$; sample card used so Hot products
-   shows; live Pokémon 100 ticker 988.4). Portfolio reads CA$0.00 — the
-   local run's binder is empty; no values fabricated. Binder flip NOT built
-   (Dan, Nov 24): the real binder is a single 9-pocket page — verified in
-   the app (1 page dot, prev/next hidden) and the local binder is empty
-   (0 cards, also 1 page) — so there are no real extra pages to flip
-   through; no pages fabricated. The old CSS "illustrated scan moment" figure and
+   SEEDED DEMO, honest (Dan, Nov 25): the binder is a seeded demo captured
+   from the real app, NOT Logan's own collection — page 1 is Logan's 9
+   cards exactly as seeded Nov 24 (CA$2,129 at the seeded prices); pages
+   2–3 are 18 more real cards whose prices were fetched live Nov 25, 2026
+   via PriceCharting (TCGdex cross-check), total $3,202.36 USD = CA$4,577
+   at the live USD→CAD rate 1.429 on Nov 25. Page-1 prices were NOT
+   re-fetched (kept exactly per the Nov 24 seed); a live check Nov 25
+   shows 7 of the 9 are off market, 5 wildly (Charizard $800 vs ~$6 live)
+   — the caption says "priced Nov 24–25, 2026" (page 1 Nov 24, pages 2–3
+   Nov 25) and must never claim page 1 is live-priced. Home re-captured
+   Nov 25 from the real app with the same 27-card binder (fresh profile,
+   country set to Canada via Settings so prices read CA$; sample card used
+   so Hot products shows; live Pokémon 100 ticker 1,006.7 ▲1.9%).
+   Portfolio reads CA$4,577 — the real seeded sum; no values fabricated.
+   Near You reads "Finding your city…" (ipapi is CORS-blocked from a
+   file:// origin). The old CSS "illustrated scan moment" figure and
    its CSS are gone (removed Nov 24); the price-history sheet and confetti
    shots (price-history-sheet.png, confetti-burst.png) stay in the repo but
    are no longer on the page.
@@ -91,26 +101,42 @@ product.
    guardian cards as towers, name your Warden, hold the breach — every
    victory earns a card." 3 points: guardian cards are your towers (twelve
    guardians) · a Warden you name and drive · every victory earns a card.
-   Status pill: "Coming soon". Visual: 2 REAL gameplay screenshots —
-   screenshots/hr-level2-battle.webp — a real Level 2 (Dark Forest) night-1
-   battle in a LANDSCAPE phone frame (.phone.land, 915x412, sideways like
-   the battle plays; the .phones stack vertically for this block), Nov 24,
-   captured headless from the ship file with the Warden + Mauler/Archer/
-   Spark holding the campfire against the horde, an enemy ON the fire and
-   damage numbers visible (re-shot Nov 24 — Dan: the first capture read as
-   a quiet camp, enemies far from the fire); and screenshots/hr-level1-
-   battle.webp — a real Level 1 (Vault Keep) wave-1 battle, Nov 24, enemies
-   on the torch-lit road with HP bars, a guardian engaged and damage
-   numbers (-29/-18/-34) visible. The Level 1 frame stays PORTRAIT: the
-   vault chapter is portrait-only in the game (code-proven rotate gate —
-   landscape shows a rotate screen, waves never play), so a portrait frame
-   is the honest one, not a letterbox. It replaces the saga map (hr-saga.
-   webp, a menu, removed from the repo Nov 24 — Dan: show Level 1 playing,
-   not the map). The modes-screen shot (hr-modes.webp) was replaced Nov 24
-   — Dan: the two shots were menus, not gameplay. Nov 24, Dan: NO black
-   camera pill on any phone frame — the .phone::after and .phone.land::
-   after rules are deleted site-wide; every phone frame (all products)
-   shows its image edge to edge inside the frame bezel. The key art
+   Status pill: "Coming soon". Visual: 2 REAL gameplay VIDEOS, muted
+   autoplay loops, same treatment as the On This Day clips —
+   screenshots/hr-level2-battle.mp4 — a real Level 2 (Dark Forest) night-1
+   battle in a LANDSCAPE phone frame (.phone.land, sideways like the
+   battle plays; the .phones stack vertically for this block), Nov 25,
+   captured headless from the ship file: the campfire CENTERED in frame
+   with the Warden + Mauler/Archer/Spark ringing it and the horde
+   attacking in, damage numbers visible (4.4s, 640x288, 11.6 fps, 229 KB;
+   cut to the first 4.4s to stay clear of a "fire feeds on victory" toast
+   that covers the fire mid-record; poster hr-level2-battle.webp is frame
+   1 of the clip). Caption corrected Nov 25 — "Level 2, the fire level"
+   was wrong; the chapter is the Dark Forest (Dan's correction, game
+   source line 2538); and screenshots/hr-level1-battle.mp4 — a real
+   Level 1 (Vault Keep) wave-1 battle, Nov 25, enemies on the torch-lit
+   road with HP bars, guardians engaged and damage numbers visible
+   (7.0s, 288x640 portrait, 13.6 fps, 212 KB; poster
+   hr-level1-battle.webp is frame 1 of the clip). The Level 1 frame
+   stays PORTRAIT: the vault chapter is portrait-only in the game
+   (code-proven rotate gate — landscape shows a rotate screen, waves
+   never play), so a portrait frame is the honest one, not a letterbox.
+   It replaces the saga map (hr-saga.webp, a menu, removed from the repo
+   Nov 24 — Dan: show Level 1 playing, not the map). The modes-screen
+   shot (hr-modes.webp) was replaced Nov 24 — Dan: the two shots were
+   menus, not gameplay.
+   Framing note (Nov 25): the first video attempt put the fire off-screen
+   (top-left corner) — the capture formula treated the camera as
+   top-left-of-view, but the game's camera is pivot-based
+   (viewLeft = VW/2 + cam.x - VW/2/z); corrected to center the fire at
+   screen fractions (0.50, 0.40) and verified on frame 1 before
+   recording. Frame rate is ~12-14 fps, not 30: the game itself runs
+   ~30 fps headless when quiet but drops under battle load in software
+   rendering; the motion is real, just steppy. The Nov 24 stills are
+   gone (replaced by the videos + their frame-1 posters). Nov 24, Dan:
+   NO black camera pill on any phone frame — the .phone::after and
+   .phone.land::after rules are deleted site-wide; every phone frame
+   (all products) shows its image edge to edge inside the frame bezel. The key art
    (screenshots/hollowreign-keyart.webp) stays in the repo and is still
    the OG image, but is no longer on the page.
 7. **#apps — OUTBREAK** (id outbreak): kicker "LIVE NOW ON ROBLOX"; H2
@@ -289,7 +315,7 @@ right edge. Causes, all fixed and all must stay fixed:
 ## 10. Performance
 - Single HTML file + fonts + screenshots. transform/opacity animations only.
   No frameworks.
-- Media budget (Nov 24): the eight new visual files total ~630 KB
+- Media budget (Nov 24, updated Nov 25): the eight new visual files total ~630 KB
   (sv-binder 63 KB, sv-home 85 KB, sv-tabbar 3 KB, hr-modes 39 KB, hr-saga 88 KB,
   mm-home 69 KB, mm-mission-crop 63 KB, pf-game 64 KB, pf-create 116 KB)
   plus hr-level2-battle.webp 35 KB (Nov 24, re-shot — replaces the 41 KB
@@ -297,9 +323,16 @@ right edge. Causes, all fixed and all must stay fixed:
   replaces hr-saga.webp on the page — hr-saga removed from the repo;
   hr-modes stays in the repo) plus two looping clips: otd-loop.mp4 at 1.23 MB and otd-nuremberg.mp4
   at 0.86 MB (replaced the 67 KB otd-stalingrad.webp still Nov 24 —
-  it was a picture captioned as footage). Below-fold images are
-  loading="lazy"; the videos are preload="metadata" with posters.
+  it was a picture captioned as footage). Nov 25 ScanVault refresh (Dan's
+  order): sv-binder-flip.mp4 345 KB (4s loop, poster sv-binder.webp 63 KB,
+  now the 27-card page 1) and sv-home.webp 80 KB (412x2382, replaces the
+  85 KB 412x2660 Nov 24 capture) and sv-tabbar.webp 3 KB (re-captured).
+  Below-fold images are loading="lazy"; the videos are preload="metadata" with posters.
   Nothing multi-MB.
+- Nov 25 change log: `.launch-note a` switched from the border-bottom
+  underline hack to native text-decoration (underline, offset 3px,
+  thickness 1px, cyan) — visually identical. ScanVault left frame is now
+  the flip video (see §3); Home re-captured with the 27-card binder.
 
 ## 11. SEO/OG/a11y
 - Title: "True North Interactive — Apps Worth Collecting" (54 chars)
